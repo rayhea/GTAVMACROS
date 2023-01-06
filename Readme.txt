@@ -2,7 +2,7 @@ Release GTAMACROS v2.0 (PC)
 		by rayhea
 
 Disclaimer :
-GTAMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
+GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
 
 About Hotkey (.ahk) :
 It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
