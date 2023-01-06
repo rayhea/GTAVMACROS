@@ -1,4 +1,4 @@
-Release GTAMACROS v2.0 (PC)
+Release GTAVMACROS v2.0 (PC)
 		by rayhea
 
 Disclaimer :
