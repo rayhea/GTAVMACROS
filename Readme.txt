@@ -2,12 +2,10 @@ Release GTAMACROS v2.0 (PC)
 		by rayhea
 
 Disclaimer :
-GTAMACROS offers many features but at the cost of tons of changes to game settings such as you may have 
-to play in medium graphics windowed mode so proceed further only if you want to.
+GTAMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
 
 About Hotkey (.ahk) :
-It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, 
-macros and some automation in any Windows program.
+It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
 
 About GTAVMACROS.ahk script :
 It does not hack/temper game or its files in any shape or form, it just automate key strokes.
@@ -16,9 +14,7 @@ It is not guarantee to work properly even after making all the changes given bel
 It has many features so go through carefully and do the necessary changes before using.
 
 Credits :
-There are many ideas taken from many scripts let it be relate to game or not some links are commented out 
-in code if you want to check but special thanks to KeyMash, SnowFlake_FlowSnake (from autohotkey forum), 
-2called_chaos (from reddit) for their GTA Macro script and many others.
+There are many ideas taken from many scripts let it be relate to game or not some links are commented out in code if you want to check but special thanks to KeyMash, SnowFlake_FlowSnake (from autohotkey forum), 2called_chaos (from reddit) for their GTA Macro script and many others.
 
 Worked/Tested in:
 Game Version 1.64
