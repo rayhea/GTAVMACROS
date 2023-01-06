@@ -1,0 +1,92 @@
+NAMES               KEYS      MODES     DESCRIPTIONS
+
+Appskey             AppsKey   Single    Toggle Hotkey On/Off
+                              Double    Reload the Script (beep sound)
+                              Hold      Exit the Script
+
+Sound               /         Double    Toggle Script sound
+
+Script Menu         ~         Single    Toggle Window focus between Game and Gui
+                              Hold      Show/Hide Gui
+
+Mute                ;         Menu      Extra Options to Toggle Mic 
+
+Crosshair           +         Single    Toggle Crosshair On/Off
+                              Double    Toggle Animation 
+
+Fast Exit           Alt+End   Single    Terminate GTA5.exe
+Empty Session       End       Double    To Empty public session
+
+Expanded Map        F1        Single    
+Voice Chat          F2        Single    
+Drop BullShark      F3        Single    
+Drop Armor          F4        Single    
+Equip Armor         F5        Single    
+
+Eat's Snack         F6        Single    Eats 2 Snack
+                              Hold      Keeps Eating Snacks
+
+Mechanic            F7        Single    Calls Mechanic
+Mors Mutual         F8        Single    
+Pegasus             F9        Single    
+Merryweather        F10       Single    
+Lester              F11       Single    
+                              Hold      To remove wanted level 
+
+Change Outfit       F12       Single    Navigate to Outfit Menu
+                              Later     Changes Outfit
+
+Ceo/Mc keys         - or 0    Single    Become CEO
+                              Double    Become MC
+                              Hold      Toggle Between CEO and MC
+                              Later     if CEO/MC retire
+
+Invite key          =         Single    Send Associate/Member invite to crew
+                              Double    Send Associate/Member invite to friends
+
+MultiQ              q         Single    Next radio stations
+                              Double    Toggle auto sprint  
+                              Hold      Radio Station Wheel	
+
+Return Vehicle      o         Single    
+Personal Vehicle    p         Single    
+
+Head Accessories    Num-      Single    Toggle Visor Up/Down
+                              Double    Navigate to Helmet Menu
+                              Hold      Navigate to Mask Menu
+                              Later     Change Helmet/Mask if in Helmet/Mask Menu
+
+Hacks               k         Single    First Select the hack from drop down list
+
+Maze Bank Deposit   '         Single    Deposit Money 
+                              Hold      To Stop at Option page of Maze Bank
+
+View Toggle         v         Single    Toggle Between Third Person & First Person View
+                              Double    To reset FOV but be in 1st Third Person View
+                              Hold      It cycles through FOV and when released, it sets the default FOV
+
+Custom Menu         ,         Single    Navigate to that assigned Label in interaction menu
+                              Hold      Assign the key to that Label 
+Custom Phone        .         Single    Call the assigned Contact
+                              Hold      Assign that contact
+
+Xbutton 4           F14       Single    Select assigned weapon
+Xbutton 3           F13       Single    
+Xbutton 2           Mouse5    Single    
+Xbutton 1           Mouse4    Single    Toggle Between Hand and Riffle
+
+Middle Mouse        Mouse3    Single    Opens Phone
+                              Hold      To Zoom while using Sniper Scope
+
+
+
+MODES    ACTIONS
+
+Single   Single press
+Double   Double press
+Hold     Long press
+Later    Single press within 2-3 secs to perform further task in relation to previous task
+Menu     Select behaviour from drop down menu in Script Menu "~"
+
+
+
