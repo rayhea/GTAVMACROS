@@ -222,8 +222,7 @@ Heavy Weapons          "Mouse5"
 #### Numpad Enter binded to Enter.
 
 
-### Script Menu
-------------
+## Script Menu
 
 ### Tab Main 
 
