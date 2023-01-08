@@ -121,13 +121,13 @@ Modifying keys are not recommended for those who dont know AHK language but here
 #### Voice Chat On/Off  "F2"
 *Note :- don't use F1,F2 frequently because it blocks keyboard and mouse input while changing settings.*
 
-### Interaction Menu Hotekeys
+### Interaction Menu Hotkeys
 ------------
 
-####  Drop BullShark   "F3"
-####  Drop Armor      "F4"
+#### Drop BullShark   "F3"
+#### Drop Armor      "F4"
 #### Equip Armor     "F5"
-####  Eat Snack     "F6"
+#### Eat Snack     "F6"
 - Single Press to Eat 2 Snacks.
 - Hold Press to keep eating Snacks.
 
