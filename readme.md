@@ -225,7 +225,7 @@ Heavy Weapons          "Mouse5"
 ### Script Menu
 ------------
 
-#### Tab Main 
+### Tab Main 
 
 ----------
 
@@ -250,7 +250,7 @@ Heavy Weapons          "Mouse5"
    Quick Peek Open button - to Open Quick Peek.txt.
 
 
-#### Tab Misc 
+### Tab Misc 
 
 ------------
 
@@ -290,7 +290,7 @@ press "k" at start
 Note :- for every hack, other keys must be untouched.
 ~~~
 
-#### Tab Sys 
+### Tab Sys 
 ------------
 
 #### HotVoice Voice Commands (No Command Added)
