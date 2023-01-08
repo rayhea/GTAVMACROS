@@ -27,7 +27,7 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
 ## Necessary Changes
 
 | In Game Settings|   |
-| - | - |
+| :-- | :-- |
 | **Settings >> Graphics**|   |
 | DirectX Version | DirectX 11 |
 | Screen Type | Windowed |
