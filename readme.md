@@ -111,7 +111,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 *Note :- don't use F1,F2 frequently because it blocks keyboard and mouse input while changing settings.*
 
 ### Interaction Menu Hotekeys
-
+------------
 
 ####  Drop BullShark   "F3"
 ####  Drop Armor      "F4"
@@ -153,13 +153,14 @@ After registering as Ceo/Mc President.
 - Double Press to send associate/member invite to friends.
 
 ### Phone Hotkey
-
+------------
 
 #### MazeBankDeposit "'"
 - Single press to deposit money.
 - Hold press to stop at option page.
 
 ### Phone Calls
+------------
 
 ~~~
 Mechanic          "F7"
@@ -171,7 +172,7 @@ Lester            "F11"
 *Note :- Hold Press "F11" to Remove Wanted Level by Lester.For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
 
 ### Special Dynamic Hotkey
-
+------------
 
 #### Custom Interaction menu 
  -  To assign key "," to any label in menu, Open interaction menu and select the label in menu
@@ -183,6 +184,7 @@ Lester            "F11"
 
 
 ### Gaming Mouse Hotkey
+------------
 
 #### Dynamic Weapon bind for below keys
 - To bind below key to any weapon slot while ingame, press Tab & select the weapon slot from weapon wheel and press the below key to directly assign it.
@@ -198,6 +200,7 @@ Heavy Weapons          "Mouse5"
 
 
 ### Overrided Existing Keys
+------------
 
 #### Middle Mouse
  - Hold Middle Mouse button to Zoom while using Sniper Scope.
@@ -220,7 +223,7 @@ Heavy Weapons          "Mouse5"
 
 
 ### Script Menu
-
+------------
 
 #### Tab Main 
 
@@ -299,4 +302,3 @@ Note :- for every hack, other keys must be untouched.
 #### Sounds
  -  Manages default Speakers.
  -  Has Volume Mixer.
-
