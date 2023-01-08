@@ -174,11 +174,11 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 ~~~
-Mechanic          "F7"
-MorsMutual        "F8"
-Pegasus           "F9"
-Merryweather      "F10"
-Lester            "F11"
+Call Mechanic          "F7"
+Call MorsMutual        "F8"  
+Call Pegasus           "F9"
+Call Merryweather      "F10"
+Call Lester            "F11"
 ~~~
 *Note :- Hold Press "F11" to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
 
@@ -208,7 +208,7 @@ Heavy Weapons          "Mouse5"
 Toggle Rifle and Hand  "Mouse4"
 
 ~~~
-*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined.*
+*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
 
 
 ### Overrided Existing Keys
