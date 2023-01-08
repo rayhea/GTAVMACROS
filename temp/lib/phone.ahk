@@ -266,6 +266,12 @@ NavpMenu(number)
 			return data0
 		}
 		
+		Error := ImagePhoneV()
+		if Error
+		{
+			throw 0
+		}
+		
 		while(i<2)
 		{
 			Loop % 9
@@ -287,11 +293,6 @@ NavpMenu(number)
 		}
 		
 	}
-	
-	
-	
-	
-	
 	
 	IsDialMade()
 	return 0
