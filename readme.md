@@ -33,12 +33,13 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
 | Screen Type | Windowed |
 | Resolution | 1366x768 |
 | Aspect Ratio | Auto |
+| Pause Game On Focus Loss | Off |
 | Texture Quality | Normal |
 | Post Fx | (Not Very High) |
-| **Settings >> Key Bindings >> Keyboard/Mouse**|  |
+| **Settings >> Keyboard/Mouse**|  |
 | Mouse Input Method | Windows |
-| Pause | n |
 | **Settings >> Key Bindings >> General**| |
+| Pause | n |
 | Toggle Special Ability| i  |
 | **Settings >> Key Bindings >> Weapons Select** | - |
 | Weapon Wheel | \ |
@@ -137,7 +138,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 #### Ceo/Mc key "-"
 - Single Press to register as Ceo.
 - Double Press to register as McPresident.
-After registering as Ceo/Mc President.
+- After registering as Ceo/Mc President.
 - Single Press/Double Press to retire Ceo/Mc President.
 - Hold to toggle between Ceo & McPresident.
    
@@ -169,7 +170,7 @@ Pegasus           "F9"
 Merryweather      "F10"
 Lester            "F11"
 ~~~
-*Note :- Hold Press "F11" to Remove Wanted Level by Lester.For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
+*Note :- Hold Press "F11" to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
 
 ### Special Dynamic Hotkey
 ------------
@@ -189,12 +190,13 @@ Lester            "F11"
 #### Dynamic Weapon bind for below keys
 - To bind below key to any weapon slot while ingame, press Tab & select the weapon slot from weapon wheel and press the below key to directly assign it.
 
-*By default they assigned to following weapons.*
+*By default they are assigned to following weapons.*
 ~~~
 SMG                    "F14"
 Sniper Riffle          "F13" 
-Toggle Rifle and Hand  "Mouse4"
 Heavy Weapons          "Mouse5"
+Toggle Rifle and Hand  "Mouse4"
+
 ~~~
 *Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined.*
 
