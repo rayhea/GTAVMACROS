@@ -70,6 +70,16 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
  Double click on GTAVMACROS.ahk to run the Script.\
 *Note :- temp folder and GTAVMACROS.ahk should be in same directory/parent folder.*
 
+## Important Notes
+- Make the necessary changes before using the script
+- If there is any trouble with hotkeys or mic then check if it is disabled or not in Scripts Menu.
+- While using this Script if mouse or keyboard does not respond press Ctl + Alt + Del then cancel and right click the H icon in tray to reload the script .
+- Always Exit the Script from Tray after playing.
+- Became Ceo/Mc president only using script hotkeys "-" or "0"
+- To stop unwanted action, press Esc or Right Mouse button.
+- Some Keys have different function depending on key presses i.e. single, double or hold press.
+
+
 ## Hotkeys
 
 Modifying keys are not recommended for those who dont know AHK language but here is a quick tip.
