@@ -21,49 +21,48 @@ There are many ideas taken from many scripts, some links are commented out in co
 
 ## Installation
 
- Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe
-or Download and install the latest AutoHotkey v1.1 64 bit from [official website.](https://www.autohotkey.com/download/)
+Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe or Download and install the latest AutoHotkey v1.1 64 bit from [official website.](https://www.autohotkey.com/download/)
 
 ## Necessary Changes
 
-| <ins>In Game Settings</ins>|   |
-| :-- | :-- |
-| **Settings >> Graphics**|   |
-| DirectX Version | DirectX 11 |
-| Screen Type | Windowed |
-| Resolution | 1366x768 |
-| Aspect Ratio | Auto |
-| Pause Game On Focus Loss | Off |
-| Texture Quality | Normal |
-| Post Fx | (Not Very High) |
-| **Settings >> Keyboard/Mouse**|  |
-| Mouse Input Method | Windows |
-| **Settings >> Key Bindings >> General**| |
-| Pause | n |
-| Toggle Special Ability| i  |
-| **Settings >> Key Bindings >> Weapons Select** |  |
-| Weapon Wheel | \ |
-| Select Shotgun   | 7 |
-| Select Heavy Weapon | 8 |
-| Select Special Weapon | 9 |
-| Select Pistol | 3 |
-| Select SMG | 4 |
-| Select Assualt Riffle | 5 |
-| Select Sniper Riffle | 6 |
-| **Settings >> Key Bindings >> Vehicle General** |  |
-| Previous Vehicle Weapon  | Scroll Down |
-| **Settings >> Key Bindings >> GTA Online** |  |
-| Text Chat Everyone | u |
-| Text Chat Team | y |
-| Push to Talk | t |
-| Drop Weapon | Numpad/ |
-| Drop Ammunition | Numpad\* |
-| Toggle Helmet Visor | Numpad- |
-|**<ins>In Game Phone Settings**</ins>||
-| Theme | Blue |
-| Background | Green Triangles |
-|**<ins>In Discord User Settings >> Game Overlay**</ins> ||
-|Toggle Overlay Lock| Numpad Dot |
+| <ins>In Game Settings</ins>                            |                 |
+| :--                                                    | :--             |
+| **Settings >> Graphics**                               |                 |
+| DirectX Version                                        | DirectX 11      |
+| Screen Type                                            | Windowed        |
+| Resolution                                             | 1366x768        |
+| Aspect Ratio                                           | Auto            |
+| Pause Game On Focus Loss                               | Off             |
+| Texture Quality                                        | Normal          |
+| Post Fx                                                | (Not Very High) |
+| **Settings >> Keyboard/Mouse**                         |                 |
+| Mouse Input Method                                     | Windows         |
+| **Settings >> Key Bindings >> General**                |                 |
+| Pause                                                  | n               |
+| Toggle Special Ability                                 | i               |
+| **Settings >> Key Bindings >> Weapons Select**         |                 |
+| Weapon Wheel                                           | \               |
+| Select Shotgun                                         | 7               |
+| Select Heavy Weapon                                    | 8               |
+| Select Special Weapon                                  | 9               |
+| Select Pistol                                          | 3               |
+| Select SMG                                             | 4               |
+| Select Assualt Riffle                                  | 5               |
+| Select Sniper Riffle                                   | 6               |
+| **Settings >> Key Bindings >> Vehicle General**        |                 |
+| Previous Vehicle Weapon                                | Scroll Down     |
+| **Settings >> Key Bindings >> GTA Online**             |                 |
+| Text Chat Everyone                                     | u               |
+| Text Chat Team                                         | y               |
+| Push to Talk                                           | t               |
+| Drop Weapon                                            | Numpad/         |
+| Drop Ammunition                                        | Numpad\*        |
+| Toggle Helmet Visor                                    | Numpad-         |
+|**<ins>In Game Phone Settings**</ins>                   |                 |
+| Theme                                                  | Blue            |
+| Background                                             | Green Triangles |
+|**<ins>In Discord User Settings >> Game Overlay**</ins> |                 |
+|Toggle Overlay Lock                                     | Numpad Dot      |
 > Note :- Weapon Wheel is still Tab while Script is running but it is necessary to remove Shift + Tab weapon swap lag while quickly selecting from weapon wheel.
 
 ## To Run
@@ -187,12 +186,12 @@ Call Lester            "F11"
 ------------
 
 #### Custom Interaction menu 
- -  To assign key "," to any label in menu, Open interaction menu and select the label in menu
- -  And hold key "," till interaction menu closes then just Single press key "," to use.
+- To assign key "," to any label in menu, Open interaction menu and select the label in menu
+- And hold key "," till interaction menu closes then just Single press key "," to use.
 
 #### Custom Phone Number
- -  To assign key "." to any contact in phone, Open phone and select the contact
- -  And hold key "." till phone closes then just Single press key "." to use.
+- To assign key "." to any contact in phone, Open phone and select the contact
+- And hold key "." till phone closes then just Single press key "." to use.
 
 ### Gaming Mouse Hotkey
 ------------
@@ -215,18 +214,18 @@ Toggle Rifle and Hand  "Mouse4"
 ------------
 
 #### Middle Mouse
- - Hold Middle Mouse button to Zoom while using Sniper Scope.
- -  Single Press to Open Phone.
+- Hold Middle Mouse button to Zoom while using Sniper Scope.
+- Single Press to Open Phone.
 
 #### Left Control To Sneak
- -  Changed from Single Press to Hold Press.  
+- Changed from Single Press to Hold Press.  
 *Note :- To disable this, uncheck Hold Sneak in Script Menu.*
 
 #### "v" key To Changes Camera View
- -  Now Just Toggle Betw' Third Person & First Person View.
- -  But its Necessary to be in 1st Third Person View (closest to player) to toggle at first.
- -  To Change View, Hold Press "v" it will cycle through all views then release the key at desired view.
- -  Double press to reset but be in 1st Third Person Field Of View .
+- Now Just Toggle Betw' Third Person & First Person View.
+- But its Necessary to be in 1st Third Person View (closest to player) to toggle at first.
+- To Change View, Hold Press "v" it will cycle through all views then release the key at desired view.
+- Double press to reset but be in 1st Third Person Field Of View .
 
 #### Double press q To hold Down w  
    *Note:- Single Press q still changes radio station and Hold press q brings station wheel inside vehicle.*
@@ -241,45 +240,45 @@ Toggle Rifle and Hand  "Mouse4"
 ----------
 
 #### Lucky Wheel Alarm
- -  Set Alarm For Lucky Wheel after pressing {E+Enter+S} to Spin Lucky Wheel.
- -  One beep sound Signifies Alarm Successfully set {E+Enter+S} & Two beeps is Alarm sound.
- -  Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.  
-   *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel {E+Enter+S}.*
- -  Progress bar in Script Menu shows remaining time to spin lucky wheel.  
-   *Note :- timer run out 10 minutes early and progress bar acts as slider for user to set custom alarm.*
+- Set Alarm For Lucky Wheel after pressing {E+Enter+S} to Spin Lucky Wheel.
+- One beep sound Signifies Alarm Successfully set {E+Enter+S} & Two beeps is Alarm sound.
+- Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.  
+ *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel {E+Enter+S}.*
+- Progress bar in Script Menu shows remaining time to spin lucky wheel.  
+ *Note :- timer run out 10 minutes early and progress bar acts as slider for user to set custom alarm.*
 
 #### Settings
- -  Hotkey - to turn hotkey On/Off.
- -  Hold Sneak - to turn hold crouch On/Off.
- - Sound - to turn script sound On/Off.
- -  Confirm Kill/Suspend - to display yes/on dialog whenever you tried to terminate/Suspend GTA5.
+- Hotkey - to turn hotkey On/Off.
+- Hold Sneak - to turn hold crouch On/Off.
+- Sound - to turn script sound On/Off.
+- Confirm Kill/Suspend - to display yes/on dialog whenever you tried to terminate/Suspend GTA5.
 
 #### Features
- -  Suspend button - to Empty public session works similar as suspend from resource monitor.
- -  Contacts Detect button - to detect the existing contacts in phone to configure phone hotkeys.
- -  UnStuck button - to release logical stuck keys.
-   Quick Peek Open button - to Open Quick Peek.txt.
+- Suspend button - to Empty public session works similar as suspend from resource monitor.
+- Contacts Detect button - to detect the existing contacts in phone to configure phone hotkeys.
+- UnStuck button - to release logical stuck keys.
+- Quick Peek Open button - to Open Quick Peek.txt.
 
 ### Tab Misc 
 ------------
 
 #### Phone Mode
- -  Select any Phone number and press Dial button to dial.
+-  Select any Phone number and press Dial button to dial.
 
 #### Chat Mode
- -  press y or u to select global or team chat to enter text.
- -  Double click on text or Multiple text Select by holding Ctrl or Shift then press Type button to post the text into chat box.
- -  Hold Type Button to Spam Multiple of selected text in chat box.  
-   *Note :- To stop Spamming, press any key.*
+- press y or u to select global or team chat to enter text.
+- Double click on text or Multiple text Select by holding Ctrl or Shift then press Type button to post the text into chat box.
+- Hold Type Button to Spam Multiple of selected text in chat box.  
+ *Note :- To stop Spamming, press any key.*
 
-#### Chat Edit
- -  To edit press Edit text when it turn lime it indicates that List Element are in Edit Mode.
- -  It allows to modifiy phone and chat elements.
- -  To delete Select elment and press Del and to move just drag element up/down.
+#### Edit Mode
+- To edit press Edit text when it turn lime it indicates that List Element are in Edit Mode.
+- It allows to modifiy phone and chat elements.
+- To delete Select elment and press Del and to move just drag element up/down.
 
 #### Hacks
- -  Auto : if checked, the script cycles through hack until it is complete
- -  Detect Mode : Detects the hack 
+- Auto : if checked, the script cycles through hack until it is complete
+- Detect Mode : Detects the hack 
 
 *For faster response, select the hack from drop down list and uncheck Auto and press "k" respectively*
 
@@ -303,11 +302,11 @@ Note :- for every hack, other keys must be untouched.
 ------------
 
 #### HotVoice Voice Commands (No Command Added)
- 
+
 #### Microphone
- - Manages default Microphone.
- - Has Extra Options to Toggle Mic in drop down menu.
+- Manages default Microphone.
+- Has Extra Options to Toggle Mic in drop down menu.
 
 #### Sounds
- - Manages default Speakers.
- - Has Volume Mixer.
+- Manages default Speakers.
+- Has Volume Mixer.
