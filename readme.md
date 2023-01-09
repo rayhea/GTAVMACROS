@@ -26,7 +26,7 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
 
 ## Necessary Changes
 
-| In Game Settings|   |
+| <ins>In Game Settings</ins>|   |
 | :-- | :-- |
 | **Settings >> Graphics**|   |
 | DirectX Version | DirectX 11 |
@@ -41,7 +41,7 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
 | **Settings >> Key Bindings >> General**| |
 | Pause | n |
 | Toggle Special Ability| i  |
-| **Settings >> Key Bindings >> Weapons Select** | - |
+| **Settings >> Key Bindings >> Weapons Select** |  |
 | Weapon Wheel | \ |
 | Select Shotgun   | 7 |
 | Select Heavy Weapon | 8 |
@@ -59,26 +59,23 @@ or Download and install the latest AutoHotkey v1.1 64 bit from [official website
 | Drop Weapon | Numpad/ |
 | Drop Ammunition | Numpad\* |
 | Toggle Helmet Visor | Numpad- |
-|**In Game Phone Settings**||
+|**<ins>In Game Phone Settings**</ins>||
 | Theme | Blue |
 | Background | Green Triangles |
-|**In Discord User Settings >> Game Overlay** ||
+|**<ins>In Discord User Settings >> Game Overlay**</ins> ||
 |Toggle Overlay Lock| Numpad Dot |
 > Note :- Weapon Wheel is still Tab while Script is running but it is necessary to remove Shift + Tab weapon swap lag while quickly selecting from weapon wheel.
 
 ## To Run
- Double click on GTAVMACROS.ahk to run the Script.\
+ Double click on GTAVMACROS.ahk to run the Script.  
 *Note :- temp folder and GTAVMACROS.ahk should be in same directory/parent folder.*
 
 ## Important Notes
-- Make the necessary changes before using the script
 - If there is any trouble with hotkeys or mic then check if it is disabled or not in Scripts Menu.
-- While using this Script if mouse or keyboard does not respond press Ctl + Alt + Del then cancel and right click the H icon in tray to reload the script .
+- If mouse or keyboard does not respond press Ctl + Alt + Del then cancel and right click the H icon in tray to reload the script .
 - Always Exit the Script from Tray after playing.
-- Became Ceo/Mc president only using script hotkeys "-" or "0"
 - To stop unwanted action, press Esc or Right Mouse button.
 - Some Keys have different function depending on key presses i.e. single, double or hold press.
-
 
 ## Hotkeys
 
@@ -87,23 +84,26 @@ Modifying keys are not recommended for those who dont know AHK language but here
 - To change keybind, find that key or label and replace the third parameter of assign function with that key and do check for duplication.
 - To disable keybind, comment out kStash Object by placing ; in front.*
 
+### Script Hotkeys (works in any program)
+------------
+
 #### AppsKey. 
-- Single Press to turn Hotkeys On/Off.
-*Note :- Works only when game is focus.*
--  Double Press to Reload Script (indicated by beep sound).
-- Long Press to Terminate Script.
+- Single Press to turn Hotkeys On/Off.  
+ *Note :- Works only when game is focus.*
+- Double Press to Reload Script (indicated by beep sound).
+- Long Press to Terminate Script.  
 *Note :- Double/Long Press AppsKey works in Any Window just in case.*
 
 #### Script Sound "/"
 - Double Press to enable or disable sound from Script.
 
 #### Script Menu "`"
--  Single press to Toggle Window focus Between Game and Gui.
-- Hold press to Show/Hide Gui.
+- Single press to Toggle Window focus Between Game and Gui.
+- Hold press to Show/Hide Gui.  
  *Note :- this window can blocks pixel/image detection on screen so close it whenever not in need.*
 
 #### Microphone Mute ";"
-- Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.
+- Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.  
  *Note :- when Script is terminated, it unmutes the current muted microphone.* 
 
 #### Crosshair "Numpad +"
@@ -118,7 +118,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 #### Expanded Map On/Off  "F1"
-#### Voice Chat On/Off  "F2"
+#### Voice Chat On/Off  "F2"  
 *Note :- don't use F1,F2 frequently because it blocks keyboard and mouse input while changing settings.*
 
 ### Interaction Menu Hotkeys
@@ -137,13 +137,13 @@ Modifying keys are not recommended for those who dont know AHK language but here
 
 #### Change Outfit     "F12"
 - Single Press for Outfit Menu.
-- and later single press within 2-3 secs to change Outfit when in Outfit menu.
+- And later single press within 2-3 secs to change Outfit when in Outfit menu.
 
 #### Head Accessories  "Numpad-" 
 - Single Press to toggle Visor
 - Double Press to go to Helmet Menu
 - Long Press to go to Mask Menu
-- and later Single Press to change Helmet/Mask When in Helmet/Mask Menu.
+- And later Single Press to change Helmet/Mask When in Helmet/Mask Menu.
 
 #### Ceo/Mc key "-"
 - Single Press to register as Ceo.
@@ -180,6 +180,7 @@ Call Pegasus           "F9"
 Call Merryweather      "F10"
 Call Lester            "F11"
 ~~~
+
 *Note :- Hold Press "F11" to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
 
 ### Special Dynamic Hotkey
@@ -187,12 +188,11 @@ Call Lester            "F11"
 
 #### Custom Interaction menu 
  -  To assign key "," to any label in menu, Open interaction menu and select the label in menu
- -  and hold key "," till interaction menu closes then just Single press key "," to use.
+ -  And hold key "," till interaction menu closes then just Single press key "," to use.
 
 #### Custom Phone Number
  -  To assign key "." to any contact in phone, Open phone and select the contact
- -  and hold key "." till phone closes then just Single press key "." to use.
-
+ -  And hold key "." till phone closes then just Single press key "." to use.
 
 ### Gaming Mouse Hotkey
 ------------
@@ -201,15 +201,15 @@ Call Lester            "F11"
 - To bind below key to any weapon slot while ingame, press Tab & select the weapon slot from weapon wheel and press the below key to directly assign it.
 
 *By default they are assigned to following weapons.*
+
 ~~~
 SMG                    "F14"
 Sniper Riffle          "F13" 
 Heavy Weapons          "Mouse5"
 Toggle Rifle and Hand  "Mouse4"
-
 ~~~
-*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
 
+*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
 
 ### Overrided Existing Keys
 ------------
@@ -219,7 +219,7 @@ Toggle Rifle and Hand  "Mouse4"
  -  Single Press to Open Phone.
 
 #### Left Control To Sneak
- -  Changed from Single Press to Hold Press.
+ -  Changed from Single Press to Hold Press.  
 *Note :- To disable this, uncheck Hold Sneak in Script Menu.*
 
 #### "v" key To Changes Camera View
@@ -228,26 +228,24 @@ Toggle Rifle and Hand  "Mouse4"
  -  To Change View, Hold Press "v" it will cycle through all views then release the key at desired view.
  -  Double press to reset but be in 1st Third Person Field Of View .
 
-#### Double press q To hold Down w
+#### Double press q To hold Down w  
    *Note:- Single Press q still changes radio station and Hold press q brings station wheel inside vehicle.*
 
 #### Numpad Enter binded to Enter.
-
 
 ## Script Menu
 
 ![](https://github.com/rayhea/GTAVMACROS/blob/main/Script%20Menu.jpg?raw=true)
 
 ### Tab Main 
-
 ----------
 
 #### Lucky Wheel Alarm
  -  Set Alarm For Lucky Wheel after pressing {E+Enter+S} to Spin Lucky Wheel.
  -  One beep sound Signifies Alarm Successfully set {E+Enter+S} & Two beeps is Alarm sound.
- -  Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.
+ -  Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.  
    *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel {E+Enter+S}.*
- -  Progress bar in Script Menu shows remaining time to spin lucky wheel.
+ -  Progress bar in Script Menu shows remaining time to spin lucky wheel.  
    *Note :- timer run out 10 minutes early and progress bar acts as slider for user to set custom alarm.*
 
 #### Settings
@@ -262,11 +260,8 @@ Toggle Rifle and Hand  "Mouse4"
  -  UnStuck button - to release logical stuck keys.
    Quick Peek Open button - to Open Quick Peek.txt.
 
-
 ### Tab Misc 
-
 ------------
-
 
 #### Phone Mode
  -  Select any Phone number and press Dial button to dial.
@@ -274,7 +269,7 @@ Toggle Rifle and Hand  "Mouse4"
 #### Chat Mode
  -  press y or u to select global or team chat to enter text.
  -  Double click on text or Multiple text Select by holding Ctrl or Shift then press Type button to post the text into chat box.
- -  Hold Type Button to Spam Multiple of selected text in chat box.
+ -  Hold Type Button to Spam Multiple of selected text in chat box.  
    *Note :- To stop Spamming, press any key.*
 
 #### Chat Edit
@@ -287,6 +282,7 @@ Toggle Rifle and Hand  "Mouse4"
  -  Detect Mode : Detects the hack 
 
 *For faster response, select the hack from drop down list and uncheck Auto and press "k" respectively*
+
 ~~~
 For fingerprint hack
 press "k" for each fingerprint
@@ -309,9 +305,9 @@ Note :- for every hack, other keys must be untouched.
 #### HotVoice Voice Commands (No Command Added)
  
 #### Microphone
- -  Manages default Microphone.
+ - Manages default Microphone.
  - Has Extra Options to Toggle Mic in drop down menu.
 
 #### Sounds
- -  Manages default Speakers.
- -  Has Volume Mixer.
+ - Manages default Speakers.
+ - Has Volume Mixer.
