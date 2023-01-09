@@ -58,11 +58,12 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 | Drop Weapon                                            | Numpad/         |
 | Drop Ammunition                                        | Numpad\*        |
 | Toggle Helmet Visor                                    | Numpad-         |
-|**<ins>In Game Phone Settings**</ins>                   |                 |
+| **<ins>In Game Phone Settings**</ins>                  |                 |
 | Theme                                                  | Blue            |
 | Background                                             | Green Triangles |
-|**<ins>In Discord User Settings >> Game Overlay**</ins> |                 |
+| **<ins>In Discord User Settings >> Game Overlay**</ins>|                 |
 |Toggle Overlay Lock                                     | Numpad Dot      |
+
 > Note :- Weapon Wheel is still Tab while Script is running but it is necessary to remove Shift + Tab weapon swap lag while quickly selecting from weapon wheel.
 
 ## To Run
@@ -71,9 +72,9 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 
 ## Important Notes
 - If there is any trouble with hotkeys or mic then check if it is disabled or not in Scripts Menu.
-- If mouse or keyboard does not respond press Ctl + Alt + Del then cancel and right click the H icon in tray to reload the script .
+- If mouse or keyboard does not respond press `Ctl + Alt + Del` then cancel and right click the H icon in tray to reload the script .
 - Always Exit the Script from Tray after playing.
-- To stop unwanted action, press Esc or Right Mouse button.
+- To stop unwanted action, press `Esc` or `Right Mouse` button.
 - Some Keys have different function depending on key presses i.e. single, double or hold press.
 
 ## Hotkeys
@@ -81,12 +82,12 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 Modifying keys are not recommended for those who dont know AHK language but here is a quick tip.
 - Open \temp\lib\mapping.ahk using text editor.
 - To change keybind, find that key or label and replace the third parameter of assign function with that key and do check for duplication.
-- To disable keybind, comment out kStash Object by placing ; in front.*
+- To disable keybind, comment out kStash Object by placing ; in front.
 
 ### Script Hotkeys (works in any program)
 ------------
 
-#### AppsKey. 
+#### Script Master `AppsKey`
 - Single Press to turn Hotkeys On/Off.  
  *Note :- Works only when game is focus.*
 - Double Press to Reload Script (indicated by beep sound).
@@ -96,76 +97,76 @@ Modifying keys are not recommended for those who dont know AHK language but here
 #### Script Sound `/`
 - Double Press to enable or disable sound from Script.
 
-#### Script Menu "`"
+#### Script Menu `~`
 - Single press to Toggle Window focus Between Game and Gui.
 - Hold press to Show/Hide Gui.  
  *Note :- this window can blocks pixel/image detection on screen so close it whenever not in need.*
 
-#### Microphone Mute ";"
+#### Microphone Mute `;`
 - Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.  
  *Note :- when Script is terminated, it unmutes the current muted microphone.* 
 
-#### Crosshair "Numpad +"
+#### Crosshair `Numpad +`
 - Single press to Toggle Crosshair On/Off.
 - Double press to Toggle Animation when Left mouse button is pressed.
 
 #### Terminate / Suspend
-- To terminate GTA5.exe, press Alt+End just like Alt+F4 but faster.
-- To Empty Public Session, double press "End" (10 sec. freeze, same as Suspend from Resource Monitor).
+- To terminate GTA5.exe, press `Alt+End` just like Alt+F4 but faster.
+- To Empty Public Session, double press `End` (10 sec. freeze, same as Suspend from Resource Monitor).
 
 ### Escape Menu Hotkeys
 ------------
 
-#### Expanded Map On/Off  "F1"
-#### Voice Chat On/Off  "F2"  
+#### Expanded Map On/Off `F1`
+#### Voice Chat On/Off `F2`  
 *Note :- don't use F1,F2 frequently because it blocks keyboard and mouse input while changing settings.*
 
 ### Interaction Menu Hotkeys
 ------------
 
-#### Drop BullShark   "F3"
-#### Drop Armor      "F4"
-#### Equip Armor     "F5"
-#### Eat Snack     "F6"
+#### Drop BullShark `F3`
+#### Drop Armor `F4`
+#### Equip Armor `F5`  
+#### Eat Snack `F6`
 - Single Press to Eat 2 Snacks.
 - Hold Press to keep eating Snacks.
 
-####  Return Vehicle    "o"
+####  Return Vehicle `o`
 - If you are MC president then vehicle get return from MC menu.
-#### Personal Vehicle  "p"
+#### Personal Vehicle `p`
 
-#### Change Outfit     "F12"
+#### Change Outfit `F12`
 - Single Press for Outfit Menu.
 - And later single press within 2-3 secs to change Outfit when in Outfit menu.
 
-#### Head Accessories  "Numpad-" 
+#### Head Accessories `Numpad-` 
 - Single Press to toggle Visor
 - Double Press to go to Helmet Menu
 - Long Press to go to Mask Menu
 - And later Single Press to change Helmet/Mask When in Helmet/Mask Menu.
 
-#### Ceo/Mc key "-"
+#### Ceo/Mc key `-`
 - Single Press to register as Ceo.
 - Double Press to register as McPresident.
 - After registering as Ceo/Mc President.
 - Single Press/Double Press to retire Ceo/Mc President.
 - Hold to toggle between Ceo & McPresident.
    
-#### Ceo/Mc key "0" (No Action)
-- It is similar to "-" key but without action. Necessary for the script to know players role whether it is ceo/mc or not.
+#### Ceo/Mc key `0` (No Action)
+- It is similar to `-` key but without action. Necessary for the script to know players role whether it is ceo/mc or not.
 
-#### Capslock 
+#### Associate/Member key `Capslock` 
 - When it is single pressed and Capslock Led Lights up it lets the script know that player is a associate/member.
 - Otherwise has no role or already is a ceo/mc.
 
-#### Invite Key "="
+#### Invite Key `=`
 - Single Press to send associate/member invite to crew.
 - Double Press to send associate/member invite to friends.
 
 ### Phone Hotkey
 ------------
 
-#### MazeBankDeposit "'"
+#### MazeBankDeposit `'`
 - Single press to deposit money.
 - Hold press to stop at option page.
 
@@ -180,18 +181,18 @@ Call Merryweather      "F10"
 Call Lester            "F11"
 ~~~
 
-*Note :- Hold Press "F11" to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using "~") which is mentioned below in detail.*
+*Note :- Hold Press `F11` to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using `~`) which is mentioned below in detail.*
 
 ### Special Dynamic Hotkey
 ------------
 
 #### Custom Interaction menu 
-- To assign key "," to any label in menu, Open interaction menu and select the label in menu
-- And hold key "," till interaction menu closes then just Single press key "," to use.
+- To assign key `,` to any label in menu, Open interaction menu and select the label in menu
+- And hold key `,` till interaction menu closes then just Single press key `,` to use.
 
 #### Custom Phone Number
-- To assign key "." to any contact in phone, Open phone and select the contact
-- And hold key "." till phone closes then just Single press key "." to use.
+- To assign key `.` to any contact in phone, Open phone and select the contact
+- And hold key `.` till phone closes then just Single press key `.` to use.
 
 ### Gaming Mouse Hotkey
 ------------
@@ -213,22 +214,23 @@ Toggle Rifle and Hand  "Mouse4"
 ### Overrided Existing Keys
 ------------
 
-#### Middle Mouse
-- Hold Middle Mouse button to Zoom while using Sniper Scope.
+#### `Middle Mouse` Scope
+- Hold `Middle Mouse` button to Zoom while using Sniper Scope.
 - Single Press to Open Phone.
 
-#### Left Control To Sneak
+#### `Left Control` Sneak
 - Changed from Single Press to Hold Press.  
 *Note :- To disable this, uncheck Hold Sneak in Script Menu.*
 
-#### "v" key To Changes Camera View
+#### `v` key To Changes Camera View
 - Now Just Toggle Betw' Third Person & First Person View.
 - But its Necessary to be in 1st Third Person View (closest to player) to toggle at first.
-- To Change View, Hold Press "v" it will cycle through all views then release the key at desired view.
+- To Change View, Hold Press `v` it will cycle through all views then release the key at desired view.
 - Double press to reset but be in 1st Third Person Field Of View .
 
-#### Double press q To hold Down w  
-   *Note:- Single Press q still changes radio station and Hold press q brings station wheel inside vehicle.*
+#### Auto Sprint `q`
+- Double press `q` To hold Down `w `  
+ *Note:- Single Press q still changes radio station and Hold press q brings station wheel inside vehicle.*
 
 #### Numpad Enter binded to Enter.
 
@@ -240,10 +242,10 @@ Toggle Rifle and Hand  "Mouse4"
 ----------
 
 #### Lucky Wheel Alarm
-- Set Alarm For Lucky Wheel after pressing {E+Enter+S} to Spin Lucky Wheel.
-- One beep sound Signifies Alarm Successfully set {E+Enter+S} & Two beeps is Alarm sound.
+- Set Alarm For Lucky Wheel after pressing `E+Enter+S` to Spin Lucky Wheel.
+- One beep sound Signifies Alarm Successfully set `E+Enter+S` & Two beeps is Alarm sound.
 - Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.  
- *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel {E+Enter+S}.*
+ *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel `E+Enter+S`.*
 - Progress bar in Script Menu shows remaining time to spin lucky wheel.  
  *Note :- timer run out 10 minutes early and progress bar acts as slider for user to set custom alarm.*
 
@@ -266,8 +268,8 @@ Toggle Rifle and Hand  "Mouse4"
 -  Select any Phone number and press Dial button to dial.
 
 #### Chat Mode
-- press y or u to select global or team chat to enter text.
-- Double click on text or Multiple text Select by holding Ctrl or Shift then press Type button to post the text into chat box.
+- press `y` or `u` to select global or team chat to enter text.
+- Double click on text or Multiple text Select by holding `LCtrl` or `LShift` then press Type button to post the text into chat box.
 - Hold Type Button to Spam Multiple of selected text in chat box.  
  *Note :- To stop Spamming, press any key.*
 
@@ -280,7 +282,7 @@ Toggle Rifle and Hand  "Mouse4"
 - Auto : if checked, the script cycles through hack until it is complete
 - Detect Mode : Detects the hack 
 
-*For faster response, select the hack from drop down list and uncheck Auto and press "k" respectively*
+*For faster response, select the hack from drop down list and uncheck Auto and press `k` respectively*
 
 ~~~
 For fingerprint hack
