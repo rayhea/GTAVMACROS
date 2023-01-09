@@ -19,6 +19,12 @@ There are many ideas taken from many scripts, some links are commented out in co
 - [2called_chaos](https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/)
 - [KeyMash](https://www.autohotkey.com/board/topic/149458-gta-online-quick-menu-macros/)
 
+## Worked/Tested 
+- Game Version 1.64
+- OS Windows 10 x64
+- Monitor 1366 x 768 60hz
+- Mouse Logitech G402
+
 ## Installation
 
 Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe or Download and install the latest AutoHotkey v1.1 64 bit from [official website.](https://www.autohotkey.com/download/)
