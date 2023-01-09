@@ -93,7 +93,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 - Long Press to Terminate Script.  
 *Note :- Double/Long Press AppsKey works in Any Window just in case.*
 
-#### Script Sound "/"
+#### Script Sound `/`
 - Double Press to enable or disable sound from Script.
 
 #### Script Menu "`"
