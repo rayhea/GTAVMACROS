@@ -91,7 +91,7 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 
 ## Important Notes
 - If there is any trouble with hotkeys or mic then check if it is disabled or not in Scripts Menu.
-- If mouse or keyboard does not respond press `Ctl + Alt + Del` then cancel and right click the H icon in tray to reload the script .
+- If mouse or keyboard does not respond press `Ctl+Alt+Del` then cancel and right click the H icon in tray to reload the script .
 - Always Exit the Script from Tray after playing.
 - To stop unwanted action, press `Esc` or `Right Mouse` button.
 - Some Keys have different function depending on key presses i.e. single, double or hold press.
