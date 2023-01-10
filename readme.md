@@ -285,7 +285,7 @@ Toggle Rifle and Hand  "Mouse4"
 ------------
 
 #### Phone Mode
--  Select any Phone number and press Dial button to dial.
+-  Select any Phone number and press Dial button/Double `left click` to dial.
 
 #### Chat Mode
 - press `y` or `u` to select global or team chat to enter text.
