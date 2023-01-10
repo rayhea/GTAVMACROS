@@ -180,11 +180,11 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 ~~~
-Call Mechanic          "F7"
-Call MorsMutual        "F8"  
-Call Pegasus           "F9"
-Call Merryweather      "F10"
-Call Lester            "F11"
+Mechanic               "F7"
+MorsMutual             "F8"  
+Pegasus                "F9"
+Merryweather           "F10"
+Lester                 "F11"
 ~~~
 
 *Note :- Hold Press `F11` to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using `~`) which is mentioned below in detail.*
@@ -192,11 +192,11 @@ Call Lester            "F11"
 ### Special Dynamic Hotkey
 ------------
 
-#### Custom Interaction menu 
+#### Custom Interaction menu `,`
 - To assign key `,` to any label in menu, Open interaction menu and select the label in menu
 - And hold key `,` till interaction menu closes then just Single press key `,` to use.
 
-#### Custom Phone Number
+#### Custom Phone Number `.`
 - To assign key `.` to any contact in phone, Open phone and select the contact
 - And hold key `.` till phone closes then just Single press key `.` to use.
 
@@ -220,15 +220,15 @@ Toggle Rifle and Hand  "Mouse4"
 ### Overrided Existing Keys
 ------------
 
-#### `Middle Mouse` Scope
+#### Scope `Middle Mouse`
 - Hold `Middle Mouse` button to Zoom while using Sniper Scope.
 - Single Press to Open Phone.
 
-#### `Left Control` Sneak
+#### Sneak `Left Control`
 - Changed from Single Press to Hold Press.  
 *Note :- To disable this, uncheck Hold Sneak in Script Menu.*
 
-#### `v` key To Changes Camera View
+#### Camera View `v`
 - Now Just Toggle Betw' Third Person & First Person View.
 - But its Necessary to be in 1st Third Person View (closest to player) to toggle at first.
 - To Change View, Hold Press `v` it will cycle through all views then release the key at desired view.
