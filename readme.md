@@ -140,7 +140,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 
 #### Expanded Map On/Off `F1`
 #### Voice Chat On/Off `F2`  
-*Note :- don't use F1,F2 frequently because it blocks keyboard and mouse input while changing settings.*
+*Note :- don't use `F1`, `F2` frequently because it blocks keyboard and mouse input while changing settings.*
 
 ### Interaction Menu Hotkeys
 ------------
@@ -240,7 +240,7 @@ Toggle Rifle and Hand  "Mouse4"
 - Hold `Middle Mouse` button to Zoom while using Sniper Scope.
 - Single Press to Open Phone.
 
-#### Sneak `Left Control`
+#### Sneak `LCtrl`
 - Changed from Single Press to Hold Press.  
 *Note :- To disable this, uncheck Hold Sneak in Script Menu.*
 
