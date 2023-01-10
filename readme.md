@@ -3,6 +3,15 @@
 It's a Script written in Autohotkey for GTA V Online. It does not hack/temper game or its files in any shape or form, it just automate key strokes.
 This Hotkeys only works when game is in focus.
 
+## Disclaimer
+
+GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
+And also it is not guarantee to work properly even after making all the changes given below.
+
+## About AutoHotkey 
+
+It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
+
 ## Key Features
 - It uses OCR, pixel & image detection to navigate through Interaction Menu & Phone.
 - It disables necessary hotkeys whenever Interaction Menu, Phone, Home, Chatbox, Game Menu is opened.
@@ -16,15 +25,6 @@ This Hotkeys only works when game is in focus.
 - It has customizable crosshair `Numpad+` in script menu.
 - It has Casino/Cayo heist FingerPrint, Keypad, Voltz, Retro Fingerprint cracker.
 - It also offers Windows Sound Setting and Volume Mixer in script menu.
-
-## Disclaimer
-
-GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
-And also it is not guarantee to work properly even after making all the changes given below.
-
-## About AutoHotkey 
-
-It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
 
 ## Credits
 
