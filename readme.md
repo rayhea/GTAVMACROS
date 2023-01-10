@@ -4,19 +4,14 @@ Its a Script written in Autohotkey for GTA V Online.
 It does not hack/temper game or its files in any shape or form, it just automate key strokes.
 This Hotkeys only works when game is in focus.
 
-## Disclaimer
-
-GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
-And also it is not guarantee to work properly even after making all the changes given below.
-
-## Features
+## Key Features
 - It uses OCR, pixel & image detection to navigate through Interaction Menu & Phone.
-- It disables necessary hotkeys whenever Interaction Menu, Phone, SocialCLub, Chatbox, Game Menu is opened.
-- It can navigate Interaction Menu/Phone even when it is open.
+- It disables necessary hotkeys whenever Interaction Menu, Phone, Home, Chatbox, Game Menu is opened.
+- It can navigate Interaction Menu/Phone even when it is open or in a building.
 - It provides faster weapon toggle, binded to keyboard & extra buttons on mouse.
 - It has custom keys for Interaction Menu & Phone Contacts which can be easily assigned.
 - It has dynamic weapon keys, binded to extra buttons on mouse which can also be easily assigned.
-- It remaps v to toggle between first person and third person.
+- It remaps v to toggle between first person and selected third person view.
 - It comes with it's own script menu with extra options.
 - It has LuckyWheel Alarm also can be used as custom alarm.
 - It has empty public session option in script menu.
@@ -24,6 +19,10 @@ And also it is not guarantee to work properly even after making all the changes 
 - It has Casino/Cayo heist FingerPrint, Keypad, Voltz, Retro Fingerprint cracker.
 - It also offers Windows Sound Setting and Volume Mixer in script menu.
 
+## Disclaimer
+
+GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
+And also it is not guarantee to work properly even after making all the changes given below.
 
 ## About AutoHotkey 
 
