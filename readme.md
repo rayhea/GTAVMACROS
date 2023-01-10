@@ -1,6 +1,6 @@
 # GTA ONLINE MACROS
 
-Its a Script written in Autohotkey for GTA V Online. It does not hack/temper game or its files in any shape or form, it just automate key strokes.
+It's a Script written in Autohotkey for GTA V Online. It does not hack/temper game or its files in any shape or form, it just automate key strokes.
 This Hotkeys only works when game is in focus.
 
 ## Key Features
@@ -35,7 +35,7 @@ There are many ideas taken from many scripts, some links are commented out in co
 ## Worked/Tested 
 - Game Version 1.64
 - OS Windows 10 x64
-- Monitor 1366 x 768 60hz
+- Monitor 1366x768 60hz
 - Mouse Logitech G402
 
 ## Installation
@@ -229,7 +229,7 @@ Heavy Weapons          "Mouse5"
 Toggle Rifle and Hand  "Mouse4"
 ~~~
 
-*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to F14 and F13 and for 2 extra button gaming mouse no changes are required as Mouse5 and Mouse4 keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
+*Note :- if gaming mouse has 4 extra buttons, assign far away two keys to `F14` and `F13` and for 2 extra button gaming mouse no changes are required as `Mouse5` and `Mouse4` keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
 
 ### Overrided Existing Keys
 ------------
@@ -250,7 +250,7 @@ Toggle Rifle and Hand  "Mouse4"
 
 #### Auto Sprint `q`
 - Double press `q` To hold Down `w`  
- *Note:- Single Press q still changes radio station and Hold press q brings station wheel inside vehicle.*
+ *Note:- Single Press `q` still changes radio station and Hold press `q` brings station wheel inside vehicle.*
 
 #### Numpad Enter binded to Enter.
 
@@ -290,7 +290,7 @@ Toggle Rifle and Hand  "Mouse4"
 #### Chat Mode
 - press `y` or `u` to select global or team chat to enter text.
 - Double click on text or Multiple text Select by holding `LCtrl` or `LShift` then press Type button to post the text into chat box.
-- Hold Type Button to Spam Multiple of selected text in chat box.  
+- Hold Type Button to Spam Multiples of selected text in chat box.  
  *Note :- To stop Spamming, press any key.*
 
 #### Edit Mode
