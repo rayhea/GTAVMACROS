@@ -15,7 +15,7 @@ And also it is not guarantee to work properly even after making all the changes 
 - It can navigate Interaction Menu/Phone even when it is open.
 - It provides faster weapon toggle, binded to keyboard & extra buttons on mouse.
 - It has custom keys for Interaction Menu & Phone Contacts which can be easily assigned.
-- It has dynamic weapon keys, binded to extra buttons on mouse which can also be easily assigned to other weapons.
+- It has dynamic weapon keys, binded to extra buttons on mouse which can also be easily assigned.
 - It remaps v to toggle between first person and third person.
 - It comes with it's own script menu with extra options.
 - It has LuckyWheel Alarm also can be used as custom alarm.
