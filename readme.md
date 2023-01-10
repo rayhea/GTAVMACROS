@@ -5,8 +5,7 @@ This Hotkeys only works when game is in focus.
 
 ## Disclaimer
 
-GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to.
-And also it is not guarantee to work properly even after making all the changes given below.
+GTAVMACROS offers many features but at the cost of tons of changes to game settings such as you may have to play in medium graphics windowed mode so proceed further only if you want to. And also it is not guarantee to work properly even after making all the changes given below.
 
 ## About AutoHotkey 
 
