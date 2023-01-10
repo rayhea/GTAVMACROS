@@ -12,6 +12,18 @@ And also it is not guarantee to work properly even after making all the changes 
 
 It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
 
+## Credits
+
+There are many ideas taken from many scripts, some links are commented out in code if you want to check but special thanks to 
+- [2called_chaos](https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/)
+- [KeyMash](https://www.autohotkey.com/board/topic/149458-gta-online-quick-menu-macros/)
+
+## Worked/Tested 
+- Game Version 1.64
+- OS Windows 10 x64
+- Monitor 1366x768 60hz
+- Mouse Logitech G402
+
 ## Key Features
 - It uses OCR, pixel & image detection to navigate through Interaction Menu & Phone.
 - It disables necessary hotkeys whenever Interaction Menu, Phone, Home, Chatbox, Game Menu is opened.
@@ -26,17 +38,6 @@ It's a free and open source scripting language that lets you create keyboard sho
 - It has Casino/Cayo heist FingerPrint, Keypad, Voltz, Retro Fingerprint cracker.
 - It also offers Windows Sound Setting and Volume Mixer in script menu.
 
-## Credits
-
-There are many ideas taken from many scripts, some links are commented out in code if you want to check but special thanks to 
-- [2called_chaos](https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/)
-- [KeyMash](https://www.autohotkey.com/board/topic/149458-gta-online-quick-menu-macros/)
-
-## Worked/Tested 
-- Game Version 1.64
-- OS Windows 10 x64
-- Monitor 1366x768 60hz
-- Mouse Logitech G402
 
 ## Installation
 
