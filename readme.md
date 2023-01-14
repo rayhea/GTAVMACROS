@@ -88,7 +88,7 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 
 ## Important Notes
 - If there is any trouble with hotkeys or mic then check if it is disabled or not in Scripts Menu.
-- If mouse or keyboard does not respond press `Ctl+Alt+Del` then cancel and right click the H icon in tray to reload the script .
+- If mouse or keyboard does not respond press `Ctl+Alt+Del` then cancel and `right click` the H icon in tray to reload the script .
 - Always Exit the Script from Tray after playing.
 - To stop unwanted action, press `Esc` or `Right Mouse` button.
 - Some Keys have different function depending on key presses i.e. single, double or hold press.
@@ -180,7 +180,7 @@ Modifying keys are not recommended for those who dont know AHK language but here
 - Single Press to send associate/member invite to crew.
 - Double Press to send associate/member invite to friends.
 
-### Phone Hotkey
+### Phone Hotkeys
 ------------
 
 #### MazeBankDeposit `'`
@@ -200,7 +200,7 @@ Lester                 "F11"
 
 *Note :- Hold Press `F11` to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using `~`) which is mentioned below in detail.*
 
-### Special Dynamic Hotkey
+### Special Dynamic Hotkeys
 ------------
 
 #### Custom Interaction menu `,`
@@ -211,7 +211,7 @@ Lester                 "F11"
 - To assign key `.` to any contact in phone, Open phone and select the contact
 - And hold key `.` till phone closes then just Single press key `.` to use.
 
-### Gaming Mouse Hotkey
+### Gaming Mouse Hotkeys
 ------------
 
 #### Dynamic Weapon bind for below keys
