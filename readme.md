@@ -259,10 +259,10 @@ Toggle Rifle and Hand  "Mouse4"
 ----------
 
 #### Lucky Wheel Alarm
-- Set Alarm For Lucky Wheel after pressing `E+Enter+S` to Spin Lucky Wheel.
-- One beep sound Signifies Alarm Successfully set `E+Enter+S` & Two beeps is Alarm sound.
+- Set Alarm For Lucky Wheel after pressing `E Enter S` to Spin Lucky Wheel.
+- One beep sound Signifies Alarm Successfully set `E Enter S` & Two beeps is Alarm sound.
 - Alarm goes off before 10 min & Repeats Every 10 min and also beeps when game is not running.  
- *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel `E+Enter+S`.*
+ *Note :- Don't Press Other Keys, in between the Key's That Are Displayed To Interact/Spin Lucky Wheel `E Enter S`.*
 - Progress bar in Script Menu shows remaining time to spin lucky wheel.  
  *Note :- timer run out 10 minutes early and progress bar acts as slider for user to set custom alarm.*
 
@@ -282,7 +282,7 @@ Toggle Rifle and Hand  "Mouse4"
 ------------
 
 #### Phone Mode
--  Select any Phone number and press Dial button/Double `left click` to dial.
+- Select any Phone number and press Dial button/Double `left click` to dial.
 
 #### Chat Mode
 - press `y` or `u` to select global or team chat to enter text.
