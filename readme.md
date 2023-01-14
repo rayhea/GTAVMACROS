@@ -60,7 +60,6 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 | Pause                                                  | n               |
 | Toggle Special Ability                                 | i               |
 | **Settings >> Key Bindings >> Weapons Select**         |                 |
-| Weapon Wheel                                           | \               |
 | Select Shotgun                                         | 7               |
 | Select Heavy Weapon                                    | 8               |
 | Select Special Weapon                                  | 9               |
@@ -82,8 +81,6 @@ Install AutoHotkey from folder \setup\AutoHotkey\AutoHotkey_1.1.36.02_setup.exe 
 | Background                                             | Green Triangles |
 | <ins>**In Discord User Settings >> Game Overlay**</ins>|                 |
 |Toggle Overlay Lock                                     | Numpad Dot      |
-
-> Note :- Weapon Wheel is still Tab while Script is running but it is necessary to remove Shift + Tab weapon swap lag while quickly selecting from weapon wheel.
 
 ## To Run
  Double click on GTAVMACROS.ahk to run the Script.  
