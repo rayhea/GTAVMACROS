@@ -174,13 +174,31 @@ CustomPhoneSearch()
 
 ;/////////////////////////////////////////////////////////////////////////////////
 
-
-OpenPhone()
+PhoneState()
 {
 	global PhoneDelay
-
+	
+	Error := ImagePhoneV()
+	if !Error
+	{
+		return 100
+	}
+	Error := ImagePhoneH()
+	if !Error
+	{
+		return 400
+	}
+	
 	Send {Up}
 	sleep, %PhoneDelay%
+	
+	Error := ImagePhoneV()
+	if Error
+	{
+		throw 0
+	}
+	
+	return 0
 }
 
 IntoPhone(number)
@@ -219,22 +237,7 @@ IsDialMade()
 	}
 }
 
-PhoneState()
-{
-	
-	Error := ImagePhoneV()
-	if !Error
-	{
-		return 100
-	}
-	Error := ImagePhoneH()
-	if !Error
-	{
-		return 400
-	}
-	
-	return 0
-}
+
 
 NavpMenu(number)
 {
@@ -242,19 +245,19 @@ NavpMenu(number)
 	
 	try
 	{
+		
 		pState := PhoneState()
-		if !pState
+		if pState
 		{
-			OpenPhone()
-			pMenuScr(number)
-			NavPhone(5,number)
+			index := pMenuHome(number,pState)
 		}
 		else
 		{
-			index := pMenuHome(number,pState)
-			pMenuScr(number)
-			NavPhone(index,number)
+			index := 5
 		}
+		
+		pMenuScr(number)
+		NavPhone(index,number)
 		
 		i := 0
 		

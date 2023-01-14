@@ -18,6 +18,7 @@ target = ahk_exe GTA5.exe
 ;#InstallMouseHook
 ;#InstallKeybdHook
 ;#UseHook
+#MenuMaskKey vkE8
 
 #MaxHotkeysPerInterval 99000000
 #HotkeyInterval 99000000
@@ -52,9 +53,12 @@ SoundPath = %A_WorkingDir%\temp\other\beepbeep.mp3
 SoundPath2 = %A_WorkingDir%\temp\other\beep.mp3
 SoundPath3 = %A_WorkingDir%\temp\other\ErrorAlert.mp3
 
+;/////////////////////////////////////////////////////////////////////////////////
+;Timers
+
 Snooze := 600000 ; milliseconds = minutes*60*1000
 
-
+AutoOpenHotkey := -120000
 
 ;/////////////////////////////////////////////////////////////////////////////////
 ;mics
@@ -228,9 +232,10 @@ readinit(SavePath,"View","FOV")  ;Default View
 RES := Abs(4-FOV)
 
 
+
 NoWeaponKey := 1
-RiffleKey := 5  ;Default "8"
-RpgKey := 8     ;Default "4"
+RiffleKey := 5  
+RpgKey := 8     
 
 ShotgunKey := 7
 SpecialKey := 9
@@ -251,6 +256,8 @@ Handheld := 2
 CurrentWeapon := 1
 
 PastWeapon1 := 1
+
+MaskTabsWith := "Tab"
 
 ;//////////////////////////////////////////////////////////////////
 
@@ -2110,7 +2117,7 @@ InterMediateInterface(KeyNum,KeyMul,Select=true) ;if toggle is true mouse is sel
 
 MouseMotion(xMotion,yMotion,Scroll=0)
 {
-	global TabWaitDelay,KeySendDelay,KeyPressDelay,MouseDelay1,MouseDelay2,MouseDefault
+	global TabWaitDelay,KeySendDelay,KeyPressDelay,MouseDelay1,MouseDelay2,MouseDefault,MaskTabsWith
 	;Suspend Permit
 	
 	If GetKeyState("Shift", "P")
@@ -2127,8 +2134,8 @@ MouseMotion(xMotion,yMotion,Scroll=0)
 	}
 	
 	BlockInput, MouseMove
-	Send {\ Down}
-	KeyWait, \, D L
+	Send {%MaskTabsWith% Down}
+	KeyWait, %MaskTabsWith%, D L
 	sleep , %TabWaitDelay%
 	
 	CoordMode, MouseMove, Screen
@@ -2136,8 +2143,8 @@ MouseMotion(xMotion,yMotion,Scroll=0)
 	
 	WeaponScroll(Scroll,20)
 	
-	Send {\ Up}
-	KeyWait, \, T0.3
+	Send {%MaskTabsWith% Up}
+	KeyWait, %MaskTabsWith%, T0.3
 	BlockInput, MouseMoveOff
 	
 	If GetKeyState("RButton","P")
@@ -3258,7 +3265,7 @@ EmptyLastLog(iMenu)
 ToggleInterHotkey(size)
 {
 	static function := Func("AutoShort").bind(1)
-	global HotkeyStateVar,ScrollWheelVar
+	global HotkeyStateVar,ScrollWheelVar,AutoOpenHotkey
 	if (size=0)   ;list empty then turn On Hotkey
 	{
 		if !(HotkeyStateVar)
@@ -3277,7 +3284,7 @@ ToggleInterHotkey(size)
 			ToggleScrollWheel(0)
 			HotkeyStateVar:=false
 		}
-		Settimer,% function ,-50000
+		Settimer,% function ,% AutoOpenHotkey
 	}
 }
 
@@ -3318,14 +3325,14 @@ fToggleScroll()
 
 GetWeaponWheel()
 {
-	global CurrentWeapon
+	global CurrentWeapon,MaskTabsWith
 	
 	sleep,2000
 	BlockInput, MouseMove
-	Send {\ Down}
+	Send {%MaskTabsWith% Down}
 	sleep 200
 	CurrentWeapon := GetWeaponWheelStats()
-	Send {\ Up}
+	Send {%MaskTabsWith% Up}
 	BlockInput, MouseMoveOff
 	;interprompt("prompter",["Current Weapon {}",CurrentWeapon])
 	;interconsole("weapon",CurrentWeapon)
@@ -3430,10 +3437,10 @@ return
 TabSendLabel:
 If !GetKeyState("LAlt","P")
 {
-	SetKeyDelay -1
-	Send {Blind}{\ DownR}
-	TabToggleScroll(0)
+	;SetKeyDelay -1
+	;Send {Blind}{%MaskTabsWith% DownR}
 	
+	TabToggleScroll(0)
 	md.SetState(1)
 	KeyWait Tab
 }
@@ -3442,13 +3449,12 @@ return
 TabUpSendLabel:
 If !GetKeyState("LAlt","P")
 {
-	SetKeyDelay -1
-	Send {Blind}{\ up}
+	;SetKeyDelay -1
+	;Send {Blind}{%MaskTabsWith% up}
+	
 	CurrentWeapon :=mousewait()
 	md.SetState(0)
 	TabToggleScroll(1)
-	;interprompt("prompter",["Current Weapon {}",CurrentWeapon])
-	;interconsole("weapon",CurrentWeapon)
 	public_weapon()
 }
 return
@@ -3535,20 +3541,8 @@ return
 ;/////////////////////////////////////////////////////////////////////////////////
 
 ;helps to take screenShot again
-LWinSendLabelOld:
-Suspend Permit
-While GetKeyState("LWin","P")
-{
-	If GetKeyState("PrintScreen","P")
-	{
-		SendInput, {LWin Down}{PrintScreen}{LWin Up}
-		return
-	}
-}
-SendInput {LWin}
-return
-
 LWinSendLabel:
+Suspend Permit
 SendInput {LWin Down}
 KeyWait LWin
 SendInput {LWin Up}

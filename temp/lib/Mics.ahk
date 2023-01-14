@@ -604,7 +604,7 @@ keypad()
 			cursor := x
 			
 			if (A_index!=size)
-				sleep 2500
+				sleep 2800
 		}
 		
 		start := A_now

@@ -539,6 +539,11 @@ OpenIntMenu()
 		Send {m}
 		sleep 200
 	}
+	Error2 := ImageIntMenu()
+	if Error2
+	{
+		throw 0
+	}
 	TrackMenu("IntMenu")
 	return Error
 }
@@ -557,129 +562,132 @@ InteractionMenu(dest,next="",byref mError=0)
 {
 	global
 	
-	temp3 := []
-	pointa := []
-	
-	mIndex := player.get()
-	
-	if !OpenIntMenu()
+	try 
 	{
-		if ImageIntLabel()
+		temp3 := []
+		pointa := []
+		mIndex := player.get()
+		
+		if !OpenIntMenu()
 		{
-			if (intr=1)
+			if ImageIntLabel()
 			{
-				head0 := recognize_parent()
-				data0 := indexparse(head0)
-				mtemp := MultiMatch(data0.text,title0)
-				ntemp := (mtemp <= title1.count()) ? 1 : 2 
+				if (intr=1)
+				{
+					head0 := recognize_parent()
+					data0 := indexparse(head0)
+					mtemp := MultiMatch(data0.text,title0)
+					ntemp := (mtemp <= title1.count()) ? 1 : 2 
+					
+					if mtemp
+					{
+						init := ""
+						send {Esc %ntemp%}
+						sleep 200
+					}
+					else
+					{
+						init :=[data0.text,""]
+						temp3.push(data0.index)
+					}
+				}
 				
-				if mtemp
+				if init
 				{
-					init := ""
-					send {Esc %ntemp%}
-					sleep 200
+					searchtree(MenuItem%mIndex%,init[1],init[2],pointa,pin0:=[])
+					pointa.push(temp3*)
 				}
-				else
-				{
-					init :=[data0.text,""]
-					temp3.push(data0.index)
-				}
+				
 			}
-			
-			if init
-			{
-				searchtree(MenuItem%mIndex%,init[1],init[2],pointa,pin0:=[])
-				pointa.push(temp3*)
-			}
+		}
+		
+		searchtree(MenuItem%mIndex%,dest[1],dest[2],pointb:=[],size:=[])
+		
+		;item1 := format("pointa:{} `n pointb:{}", pointa.join(","),pointb.join(","))
+		;tooltip % item1,,,3
+		
+		;item2 := format("{}`n{},{},{}", head0, data0.text, data0.index, data0.size)
+		;tooltip % item2,357,106,2
+		
+		
+		ent := 0
+		Loop % pointa.count()-1
+		{
+			if (pointa[A_index]!=pointb[A_index])
+				break
+			ent++
+		}
+		Loop % ent
+		{
+			pointb.removeat(1)
+			pointa.removeat(1)
+			size.removeat(1)
+		}
+		escape := pointa.count()-1
+		
+		
+		
+		Loop % escape 
+		{
+			Send {Backspace}
 			
 		}
-	}
-	
-	searchtree(MenuItem%mIndex%,dest[1],dest[2],pointb:=[],size:=[])
-	
-	;item1 := format("pointa:{} `n pointb:{}", pointa.join(","),pointb.join(","))
-	;tooltip % item1,,,3
-	
-	;item2 := format("{}`n{},{},{}", head0, data0.text, data0.index, data0.size)
-	;tooltip % item2,357,106,2
-	
-	
-	ent := 0
-	Loop % pointa.count()-1
-	{
-		if (pointa[A_index]!=pointb[A_index])
-			break
-		ent++
-	}
-	Loop % ent
-	{
-		pointb.removeat(1)
-		pointa.removeat(1)
-		size.removeat(1)
-	}
-	escape := pointa.count()-1
-	
-	
-	
-	Loop % escape 
-	{
-		Send {Backspace}
+		sleep 200
 		
-	}
-	sleep 200
-	
-	if (ent=0)
-	{
-		data := intpage1(pointb[1])
+		if (ent=0)
+		{
+			data := intpage1(pointb[1])
+			
+			mError := translatemenu(pointb,data,mIndex)
+			
+			size[1] := data.size
+			cursor := data.index
+			
+		}
+		else
+		{
+			cursor := pointa[1] 
+			
+		}
 		
-		mError := translatemenu(pointb,data,mIndex)
+		if (mError)
+		{
+			next.close := 1
+			goto ExitIntMenu
+		}
 		
-		size[1] := data.size
-		cursor := data.index
+		len := pointb.count()
+		Loop % len
+		{
+			uMoves(displacement(cursor,pointb[A_index],size[A_index]))
+			
+			if(A_index!=len)
+				Send {Enter}
+			
+			cursor := 1
+		}
+		sleep 200
 		
-	}
-	else
-	{
-		cursor := pointa[1] 
+		init := dest
+		intr := 0
 		
-	}
-	
-	if (mError)
-	{
-		next.close := 1
-		goto ExitIntMenu
-	}
-	
-	len := pointb.count()
-	Loop % len
-	{
-		uMoves(displacement(cursor,pointb[A_index],size[A_index]))
+		if next.arrow
+		{
+			rMoves(next.arrow)
+		}
 		
-		if(A_index!=len)
+		if next.press
+		{
 			Send {Enter}
+		}
 		
-		cursor := 1
-	}
-	sleep 200
-	
-	init := dest
-	intr := 0
-	
-	if next.arrow
-	{
-		rMoves(next.arrow)
-	}
-	
-	if next.press
-	{
-		Send {Enter}
-	}
-	
-	ExitIntMenu:
-	
-	if next.close
-	{
-		Send {m}
+		ExitIntMenu:
+		
+		if next.close
+		{
+			Send {m}
+		}
+		
 	}
 	
 	;TrackMenu("IntMenu")

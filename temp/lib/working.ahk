@@ -97,6 +97,15 @@ private_menu(obj)
 	}
 }
 
+private_weapon(obj)
+{
+	global
+	if (PastWeapon1 != 1)
+	{
+		PastWeapon1 := obj.retrieve()
+	}
+}
+
 private_fov(obj)
 {
 	global 

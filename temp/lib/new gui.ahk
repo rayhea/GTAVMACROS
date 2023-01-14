@@ -429,7 +429,7 @@ class Gui
 			menu["Extrabutton4"] := new Manage("Main",inum++,widg,"Key G8",{"variable":"Extrabutton4","default":Extrabutton4,"save":"Weapon"},weapon)
 			menu["Extrabutton3"] := new Manage("Main",inum++,widg,"Key G7",{"variable":"Extrabutton3","default":Extrabutton3,"save":"Weapon"},weapon)
 			menu["Extrabutton2"] := new Manage("Main",inum++,widg,"Key G5",{"variable":"Extrabutton2","default":Extrabutton2,"save":"Weapon"},weapon)
-			menu["Extrabutton1"] := new Manage("Main",inum++,widg,"Key G4",{"variable":"Extrabutton1","default":Extrabutton1,"save":"Weapon"},weapon)
+			menu["Extrabutton1"] := new Manage("Main",inum++,widg,"Key G4",{"function":"private_weapon","variable":"Extrabutton1","default":Extrabutton1,"save":"Weapon"},weapon)
 
 			;////////////////////////////////////////////////////////////////////////////////////////////
 			;network

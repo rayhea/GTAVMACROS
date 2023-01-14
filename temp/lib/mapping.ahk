@@ -138,6 +138,7 @@ kStash.Assign("MuteUpLabel","~*",MuteHoldKey " Up")
 
 
 
+
 kStash.Hotkey("WinAppear")
 
 kStash.Assign("LWinSendLabel","*","LWin")
@@ -185,10 +186,7 @@ kStash.Assign("btHacks","*","k")
 kStash.Assign("LMouseUpLabel","~*","LButton Up")
 
 
-kStash.Assign("TabSendLabel","~*","Tab")
 
-
-kStash.Assign("TabUpSendLabel","~*","Tab up")
 
 
 kStash.Assign("mMouseLabel","*$","MButton")
@@ -213,6 +211,13 @@ kStash.Assign("VoiceChat","*","F2")
 HotVoiceKey := "l"
 kStash.Assign("HotVoiceLabel","*",HotVoiceKey)
 kStash.Assign("HotVoiceUp","*",HotVoiceKey " Up")
+
+
+kStash.Assign("TabSendLabel","~*","Tab")
+
+
+kStash.Assign("TabUpSendLabel","~*","Tab up")
+
 
 
 
@@ -263,6 +268,11 @@ kStash.Assign("WheelDownHotkey1","~*","WheelDown")
 
 
 kStash.Assign("fSendLabel","~*","f")
+
+
+
+
+
 
 
 
