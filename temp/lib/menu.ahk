@@ -40,7 +40,9 @@ ImageLabels(incr,mark,label,args)
 
 recognize_parent()
 {
-	return OCR([51,110,298,17],"eng")
+	x := 51, y := 110
+	ScrMode(x,y)
+	return OCR([x,y,298,17],"eng")
 }
 
 recognize_child()
@@ -48,7 +50,11 @@ recognize_child()
 	node := ""
 	index := intpointer()
 	if index
-		node := OCR([46,130+26*(index-1),306,26],"eng")
+	{
+		x := 46, y := 130+26*(index-1)
+		ScrMode(x,y)
+		node := OCR([x,y,306,26],"eng")
+	}
 	return node
 }
 
@@ -57,7 +63,8 @@ intpointer()
 	yaxis := 143
 	Loop % 7
 	{
-		if iprop.InRange(pixelcolor(49,yaxis,"Screen"),0xf0f0f0,30)
+		color := pixelcolor(49,yaxis)
+		if iprop.InRange(color,0xf0f0f0,30)
 		{
 			return A_index
 			break
@@ -218,7 +225,7 @@ introle(byref menu)
 			public_role()
 		}
 	}
-	return player.max()
+	return menu>4
 }
 
 

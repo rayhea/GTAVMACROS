@@ -1,13 +1,5 @@
 ;/////////////////////////////////////////////////////////////////////////////////
 
-SimpleDetect(byref x,byref y,x1,y1,x2,y2,path0,args="*50")
-{
-	CoordMode, Pixel, Screen
-	dir := path0 ".bmp"
-	ImageSearch, x, y, x1, y1, x2, y2, %args% %dir%
-	return ErrorLevel
-}
-
 ImageContacts(mark0,name)
 {
 	global 
@@ -53,7 +45,7 @@ phpointer()
 	yaxis := 554
 	Loop % 5
 	{
-		color := pixelcolor(1160,yaxis,"Screen")
+		color := pixelcolor(1160,yaxis)
 		if iprop.InRange(color,0x63BBFF,60) 
 		{
 			return {"i":A_index,"r":550+33*(A_index-1),"c":color}
@@ -691,19 +683,9 @@ DialNumber(number)
 
 matrixp(num,row,col)
 {
-	i:=1,incr:=1
-	while(i<row+1)
-	{
-		j:=1
-		while(j<col+1)
-		{
-			if (num=incr)
-				return [i,j]
-			incr++
-			j++
-		}
-		i++
-	}
+	quo := ((num-1)//col)+1
+	rem := mod(num-1,col)+1
+	return [quo,rem]
 }
 
 

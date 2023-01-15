@@ -346,7 +346,7 @@ class LocateCorner
 					xInit := xStart
 					while(xInit < xFinal)
 					{
-						color := this.rgbtodec(pixelcolor(xInit,yInit,"Screen"))
+						color := this.rgbtodec(pixelcolor(xInit,yInit))
 						mono := (0.2125 * color.r) + (0.7154 * color.g) + (0.0721 * color.b)
 						
 						if (mono >= threshold)

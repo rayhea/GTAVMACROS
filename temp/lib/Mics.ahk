@@ -2,15 +2,7 @@
 ;Imported Macros
 ;https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/
 
-MouseWheel2(by = 1)
-{
-	global WheelDelay
-	Loop %by%
-	{
-		MouseClick, WheelUp, , , 20, 0, D, R
-		Sleep WheelDelay
-	}
-}
+
 
 
 ;//////////////////////////////////////////////////////////////////
@@ -45,14 +37,15 @@ typeOutText(Str,State)
 	
 	setkeydelay, %TextSendDelay%, %TextPressDelay%
 	
-	if !(GetLastLog()="chatbox")
+	ChatOpen := (GetLastLog()="chatbox")
+	;tooltip % ChatOpen
+	if !ChatOpen
+	{
 		Send {%ChatSnippetKey%}
-	else
-		logger.pop()
+	}
 	
 	if State
 	{
-	
 		type := SpamText(StrStyle(Str,TextStyle))
 		
 		if InStr(type,"|")
@@ -86,7 +79,14 @@ typeOutText(Str,State)
 	{
 		Send % StrStyle(Str,TextStyle)
 	}
+	
 	setkeydelay, %KeySendDelay%, %KeyPressDelay%
+	
+	if ChatOpen
+	{
+		TrackMenu("Enter")
+	}
+
 }
 
 
@@ -177,19 +177,7 @@ GetLine(arr,dir)
 	return
 }
 
-ImageDetect(byref X, byref Y,x1,y1,x2,y2,paths,args="*50")
-{
-	CoordMode, Pixel, Screen
-	Loop % paths.Count()
-	{
-		dir := paths[A_index] ".bmp"
 
-		ImageSearch, X, Y, x1, y1, x2, y2, %args% %dir%
-		if !ErrorLevel
-			return ErrorLevel
-	}
-	return ErrorLevel
-}
 
 GetPathsDir(path1,name,ends="")
 {
@@ -277,7 +265,15 @@ Swap(ByRef Left, ByRef Right)
     Right := temp
 }
 
-
+MouseWheel2(by = 1)
+{
+	global WheelDelay
+	Loop %by%
+	{
+		MouseClick, WheelUp, , , 20, 0, D, R
+		Sleep WheelDelay
+	}
+}
 
 xMoves(x)
 {
@@ -291,6 +287,58 @@ yMoves(y)
 	Key := (y<0) ? "w":"s"
 	mul := abs(y)
 	Send {%Key% %mul%}
+}
+
+;//////////////////////////////////////////////////////////////////
+
+ScrMode(byref x1,byref y1,byref x2=0,byref y2=0)
+{
+	global target 
+	
+	WinGetPos, x0, y0,,,% target
+	x1 := x1 + x0, y1 := y1 + y0
+	x2 := x2 + x0, y2 := y2 + y0
+}
+
+pixelcolor(x,y)
+{
+	ScrMode(x,y)
+	CoordMode, Pixel, Screen
+	PixelGetColor,color,x,y,RGB 
+	return color
+}
+
+pixeldetect(x,y,data)
+{
+	color := pixelcolor(x,y)
+	if (color=data)
+		return 1
+	else 
+		return 0
+}
+
+ImageDetect(byref X, byref Y,x1,y1,x2,y2,paths,args="*50")
+{
+	ScrMode(x1,y1,x2,y2)
+	CoordMode, Pixel, Screen
+	Loop % paths.Count()
+	{
+		dir := paths[A_index] ".bmp"
+
+		ImageSearch, X, Y, x1, y1, x2, y2, %args% %dir%
+		if !ErrorLevel
+			return ErrorLevel
+	}
+	return ErrorLevel
+}
+
+SimpleDetect(byref x,byref y,x1,y1,x2,y2,path0,args="*50")
+{
+	ScrMode(x1,y1,x2,y2)
+	CoordMode, Pixel, Screen
+	dir := path0 ".bmp"
+	ImageSearch, x, y, x1, y1, x2, y2, %args% %dir%
+	return ErrorLevel
 }
 
 InsertCorner(y,w,h,t,v*)

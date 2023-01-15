@@ -300,7 +300,7 @@ PriorHotkeyDelay := 5000
 
 ChatSnippetKey := "y"
 
-MouseDelay1 := 2
+MouseDelay1 := 1
 MouseDelay2 := 4
 MouseDefault := 50
 
@@ -2123,8 +2123,8 @@ MouseMotion(xMotion,yMotion,Scroll=0)
 	If GetKeyState("Shift", "P")
 	{
 		SetMouseDelay %MouseDelay1%
-		setkeydelay, 20, 15
-		TabWaitDelay = 100
+		setkeydelay, 20, 14
+		TabWaitDelay = 120
 	}
 	else
 	{
@@ -2251,16 +2251,9 @@ Getinfo()
 		WinGetPos,,, Width, Height, A
 	
 	if ((Width=1366) && (Height=769))
-		return [683, 305, 206]
-	else if ((Width=1286) && (Height=769))
-		return [683, 333, 206]
-	else if ((Width=1286) && (Height=749))
-		return [683, 333, 206]
-	else if ((Width=1030) && (Height=769))
-		return [683, 333, 206]
-	else if ((Width=806) && (Height=629))
-		return [683, 333, 206]
-	
+		return [686, 331, 206]
+	else 
+		return [686, 359, 206]
 }
 
 
@@ -2274,6 +2267,8 @@ GetWeaponWheelStats()
 	yCenter := WheelConfig[2]
 	radius := WheelConfig[3]
 	
+	pcolor := 0x2D6EB9
+	
 	WheelArr := GetWheelArr(radius) ;[[b1,b2]] [[[x1,y1],[x2,y2]]]
 	
 	Loop % WheelArr.Count()
@@ -2284,30 +2279,14 @@ GetWeaponWheelStats()
 		x1 := b1[1], y1 := b1[2]
 		x2 := b2[1], y2 := b2[2]
 		
-		If iprop.InRange(pixelcolor(round(xCenter+x1),round(yCenter+y1)),0x2D6EB9) || iprop.InRange(pixelcolor(round(xCenter+x2),round(yCenter+y2)),0x2D6EB9)
+		If iprop.InRange(pixelcolor(round(xCenter+x1),round(yCenter+y1)),pcolor) || iprop.InRange(pixelcolor(round(xCenter+x2),round(yCenter+y2)),pcolor)
 			return weaponwheel[A_index]
 	}
 	return CurrentWeapon
 }
 
 
-pixelcolor(x,y,m:="Client")
-{
 
-	CoordMode, Pixel, %m%
-	PixelGetColor,color,x,y,RGB 
-	return color
-}
-
-
-pixeldetect(x,y,data)
-{
-	color := pixelcolor(x,y)
-	if (color=data)
-		return 1
-	else 
-		return 0
-}
 
 
 
@@ -2336,7 +2315,6 @@ pixelwait(array,exclude:="",max:=4,delay:=0,threshold:=0,qreturn:=0)
 	rWidth := temp[1]
 	rHeight := temp[2]
 	;tooltip % rWidth " " rHeight
-	CoordMode, Pixel, Client
 	
 	split :=  array.Count()
 	
@@ -2353,7 +2331,7 @@ pixelwait(array,exclude:="",max:=4,delay:=0,threshold:=0,qreturn:=0)
 			xaxis := k.1*rWidth
 			yaxis := k.2*rHeight
 
-			PixelGetColor,color,xaxis,yaxis,RGB 
+			color := pixelcolor(xaxis,yaxis)
 			;tooltip % format("{} {} data:0x{:X} get:{} ",xaxis,yaxis,k.3,color)
 			;mousemove,xaxis,yaxis
 			
@@ -2599,8 +2577,7 @@ GetColour(xLoc,yLoc)
 	;MouseMove ,%xLoc% ,%yLoc%
 	;sleep 1000
 	
-	CoordMode, Pixel, Client
-	PixelGetColor, color, xLoc, yLoc, RGB
+	color := pixelcolor(xLoc, yLoc)
 	If (color = 0xE8E8E8)
 	{
 		return false
@@ -2942,6 +2919,7 @@ LbWrite()
 beSave()
 {
 	global
+	CoordMode, ToolTip, Screen
 	Tooltip,GTAVMACROS ClOSING....,0,0
 	writeinit(SavePath,"Alarm","AlarmDateTime")
 }
@@ -3197,7 +3175,7 @@ detectpixelof(label,state)
 				sleep ,200
 				return pixelwait(SocialClubpixel,,3,100)
 			case "Esc":
-				sleep ,500
+				sleep ,400
 				return pixelwait(EscMenupixel,,3,100)
 			case "IntMenu":
 				sleep, 200
@@ -3215,7 +3193,7 @@ detectpixelof(label,state)
 				sleep, 200
 				return pixelwait(SocialClubpixel,,2,,,1)
 			case "Esc":
-				sleep, 200
+				sleep, 400
 				return pixelwait(EscMenupixel,,2,,,1)
 			case "IntMenu":
 				sleep, 200
@@ -3630,7 +3608,7 @@ if GetKeyState("tab","P")
 	return
 }
 
-KeyWait, %LocalKeyTrimed%, T0.4
+KeyWait, %LocalKeyTrimed%, T0.5
 If ErrorLevel
 {
 	While GetKeyState(LocalKeyTrimed,"P") ;Change View
