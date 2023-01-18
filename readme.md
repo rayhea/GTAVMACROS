@@ -9,7 +9,7 @@ GTAVMACROS offers many features but at the cost of tons of changes to game setti
 
 ## About AutoHotkey 
 
-It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
+It's a free and open source scripting language that lets you create keyboard shortcuts, hotkeys, macros and some automation in any Windows Applications.
 
 ## Credits
 
