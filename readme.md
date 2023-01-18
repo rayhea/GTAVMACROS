@@ -231,9 +231,9 @@ Toggle Rifle and Hand  "Mouse4"
 ### Overrided Existing Keys
 ------------
 
-#### Scope `Middle Mouse`
-- Hold `Middle Mouse` button to Zoom while using Sniper Scope.
-- Single Press to Open Phone.
+#### Weapon Selects `1` to `9`
+- single press to select weapon
+- double press to assigned `Mouse5` that weapon
 
 #### Sneak `LCtrl`
 - Changed from Single Press to Hold Press.  
@@ -248,6 +248,10 @@ Toggle Rifle and Hand  "Mouse4"
 #### Auto Sprint `q`
 - Double press `q` To hold Down `w`  
  *Note:- Single Press `q` still changes radio station and Hold press `q` brings station wheel inside vehicle.*
+
+#### Scope `Middle Mouse`
+- Hold `Middle Mouse` button to Zoom while using Sniper Scope.
+- Single Press to Open Phone.
 
 #### Numpad Enter binded to Enter.
 
