@@ -17,13 +17,12 @@ There are many ideas taken from many scripts, some links are commented out in co
 - [2called_chaos](https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/)
 - [KeyMash](https://www.autohotkey.com/board/topic/149458-gta-online-quick-menu-macros/)
 
-
 ## Key Features
 - It uses OCR, pixel & image detection to navigate through Interaction Menu & Phone.
 - It disables necessary hotkeys whenever Interaction Menu, Phone, Home, Chatbox, Game Menu is opened.
-- It provides faster weapon toggle, binded to keyboard & extra buttons on mouse.
+- It provides faster weapon toggle, binded to keyboard & extra mouse buttons.
 - It has custom keys for Interaction Menu & Phone Contacts which can be easily assigned.
-- It has dynamic weapon keys, binded to extra buttons on mouse which can also be easily assigned.
+- It has dynamic weapon keys, binded to extra mouse buttons which can also be easily assigned.
 - It remaps `v` to toggle between first person and selected third person view.
 - It comes with it's own script menu with extra options.
 - It has LuckyWheel Alarm also can be used as custom alarm.
