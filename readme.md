@@ -120,10 +120,10 @@ Modifying keys are not recommended for those who dont know AHK language but here
 
 #### Microphone Mute `;`
 - Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.  
-- Disabled - To disable Mute `;` Hotkey. (by default)
+- Disabled - To disable Mute Hotkey `;`. (by default)
 - ToggleMute - To toggle Mic.
 - HoldToTalk - Hold `;` to unmute.
-- TapToTalk - if threshold is not met for certain timeout duration then mic is muted
+- TapToTalk - If threshold is not met for certain timeout duration then mic is muted or press `;` to reset.  
  *Note :- when Script is terminated, it unmutes the current muted microphone.* 
 
 #### Crosshair `Numpad+`
@@ -304,8 +304,8 @@ Toggle Rifle and Hand  Mouse4
 - To delete Select elment and press Del and to move just drag element up/down.
 
 #### Hacks
-- Auto : if checked, the script cycles through hack until it is complete
-- Detect Mode : Detects the hack 
+- Auto : If checked, the script cycles through hack until it is complete.
+- Detect Mode : Detects the hack.  
 
 *For faster response, select the hack from drop down list and uncheck Auto and press `k` respectively*
 
