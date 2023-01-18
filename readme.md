@@ -120,6 +120,10 @@ Modifying keys are not recommended for those who dont know AHK language but here
 
 #### Microphone Mute `;`
 - Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.  
+- Disabled - To disable Mute `;` Hotkey. (by default)
+- ToggleMute - To toggle Mic.
+- HoldToTalk - Hold `;` to unmute.
+- TapToTalk - if threshold is not met for certain timeout duration then mic is muted
  *Note :- when Script is terminated, it unmutes the current muted microphone.* 
 
 #### Crosshair `Numpad+`
@@ -191,11 +195,11 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 ~~~
-Mechanic               "F7"
-MorsMutual             "F8"  
-Pegasus                "F9"
-Merryweather           "F10"
-Lester                 "F11"
+Mechanic               F7
+MorsMutual             F8
+Pegasus                F9
+Merryweather           F10
+Lester                 F11
 ~~~
 
 *Note :- Hold Press `F11` to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using `~`) which is mentioned below in detail.*
@@ -220,10 +224,10 @@ Lester                 "F11"
 *By default they are assigned to following weapons.*
 
 ~~~
-SMG                    "F14"
-Sniper Riffle          "F13" 
-Heavy Weapons          "Mouse5"
-Toggle Rifle and Hand  "Mouse4"
+SMG                    F14
+Sniper Riffle          F13
+Heavy Weapons          Mouse5
+Toggle Rifle and Hand  Mouse4
 ~~~
 
 *Note :- if gaming mouse has 4 extra buttons, assign far away two keys to `F14` and `F13` and for 2 extra button gaming mouse no changes are required as `Mouse5` and `Mouse4` keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
@@ -307,16 +311,16 @@ Toggle Rifle and Hand  "Mouse4"
 
 ~~~
 For fingerprint hack
-press "k" for each fingerprint
+press k for each fingerprint
 
 For keypad hack
-press "k" when dot's are blinking 
+press k when dot's are blinking 
 
 For retro fingerprint hack
-press "k" for each fingerprint
+press k for each fingerprint
 
 For volt lab hack 
-press "k" at start
+press k at start
 
 Note :- for every hack, other keys must be untouched.
 ~~~
@@ -333,3 +337,5 @@ Note :- for every hack, other keys must be untouched.
 #### Sounds
 - Manages default Speakers.
 - Has Volume Mixer.
+
+*Note :- whenever new device is plugged in, press refresh to show in default drop down list*
