@@ -1,11 +1,5 @@
 ;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-ImageIntSlash()
-{
-	global
-	return SimpleDetect(X,Y,317,110,334,127,path4 "\slash","*100")
-}
-
 ImageIntMenu()
 {
 	global
@@ -16,6 +10,12 @@ ImageIntLabel()
 {
 	global
 	return SimpleDetect(X,Y,46,105,170,130,path4 "\int","*50")
+}
+
+ImageIntSlash()
+{
+	global
+	return SimpleDetect(X,Y,317,110,334,127,path4 "\slash","*100")
 }
 
 ImageIntIndex(index)
@@ -36,6 +36,21 @@ ImageLabels(incr,mark,label,args)
 	return SimpleDetect(X,Y,46+incr,130+26*(mark-1),170+incr,130+26*(mark),path4 "\" label,args)
 }
 
+
+intpointer()
+{
+	yaxis := 143
+	Loop % 7
+	{
+		color := pixelcolor(49,yaxis)
+		if iprop.InRange(color,0xf0f0f0,30)
+		{
+			return A_index
+		}
+		yaxis+=26
+	}
+	return 0
+}
 
 
 recognize_parent()
@@ -58,21 +73,7 @@ recognize_child()
 	return node
 }
 
-intpointer()
-{
-	yaxis := 143
-	Loop % 7
-	{
-		color := pixelcolor(49,yaxis)
-		if iprop.InRange(color,0xf0f0f0,30)
-		{
-			return A_index
-			break
-		}
-		yaxis+=26
-	}
-	return 0
-}
+
 
 ;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -230,10 +231,23 @@ introle(byref menu)
 
 
 
-
+GetPathsDir(path1,name,ends="")
+{
+	;ImageDetect
+	array := StrSplit(name, ",")
+	result := []
+	Loop % array.count()
+	{
+		temp0 := array[A_index]
+		data0 := path1 temp0 ends
+		result.push(data0)
+	}
+	return result
+}
 
 LabelParse(label,byref label1,byref args1,byref label2,byref args2)
 {
+	;intlabel
 	data0 := StrSplit(RegExReplace(label, "\s+", " ")," ")
 	
 	label1 := data0[1]

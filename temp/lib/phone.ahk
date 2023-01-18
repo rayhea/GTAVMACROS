@@ -1,11 +1,5 @@
 ;/////////////////////////////////////////////////////////////////////////////////
 
-ImageContacts(mark0,name)
-{
-	global 
-	return SimpleDetect(X,Y,1155,mark0.r,1248,mark0.r+32,path4 "\c." name, "*140 *Trans" mark0.c)
-}
-
 ImagePhoneV()
 {
 	global 
@@ -16,6 +10,12 @@ ImagePhoneH()
 {
 	global 
 	return SimpleDetect(X,Y,1017,456,1035,472,path4 "\p0h","*120")
+}
+
+ImageDialN()
+{
+	global
+	return SimpleDetect(X,Y,1178,547,1248,572,path4 "\dial","*100")
 }
 
 ImageMainMenu(number)
@@ -30,14 +30,11 @@ ImageNoPhoto(temp0=550)
 	return SimpleDetect(X,Y,1133,temp0,1157,temp0+33,path4 "\unknown","*120 *TransBlack")
 }
 
-ImageDialN()
+ImageContacts(mark0,name)
 {
-	global
-	return SimpleDetect(X,Y,1178,547,1248,572,path4 "\dial","*100")
+	global 
+	return SimpleDetect(X,Y,1155,mark0.r,1248,mark0.r+32,path4 "\c." name, "*140 *Trans" mark0.c)
 }
-
-
-
 
 
 phpointer()
@@ -700,12 +697,12 @@ NavPhone(init,dest)
 	}
 	else
 	{
-		cursor := postgrid(init,dest)
-		rMoves(cursor.x)
-		uMoves(cursor.y)
+		Move2d(postgrid(init,dest))
 	}
 }
 
+;/////////////////////////////////////////////////////////////////////////////////
+;Movements
 
 rMoves(x)
 {
@@ -721,6 +718,12 @@ uMoves(y)
 	Send {%Key% %mul%}
 }
 
+Move2d(grid)
+{
+	rMoves(grid.x)
+	uMoves(grid.y)
+}
+
 wMoves(w,delay=0)
 {
 	Key := (w<0) ? "WheelUp":"WheelDown"
@@ -729,5 +732,36 @@ wMoves(w,delay=0)
 	{
 		Send {%Key%}
 		sleep %delay%
+	}
+}
+
+;/////////////////////////////////////////////////////////////////////////////////
+
+LateralMovement(KeyMul,Selector)
+{
+	global WheelDelay
+	
+	If (Selector)   ;Mouse
+	{
+		wMoves(KeyMul,WheelDelay)
+	}
+	else            ;keyboard
+	{
+		uMoves(KeyMul)
+	}
+}
+
+KeyboardArrow(Key,Count)
+{
+	Send {%Key% %Count%}
+}
+
+MouseWheel2(by = 1)
+{
+	global WheelDelay
+	Loop %by%
+	{
+		MouseClick, WheelUp, , , 20, 0, D, R
+		Sleep WheelDelay
 	}
 }

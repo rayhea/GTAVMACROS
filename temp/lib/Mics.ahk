@@ -178,25 +178,12 @@ GetLine(arr,dir)
 }
 
 
-
-GetPathsDir(path1,name,ends="")
-{
-	array := StrSplit(name, ",")
-	result := []
-	Loop % array.count()
-	{
-		temp0 := array[A_index]
-		data0 := path1 temp0 ends
-		result.push(data0)
-	}
-	return result
-}
-
 Sort(array)
 {
 	
 	size := array.Count()
 	marker := 1
+	
 	While (marker<=size)
 	{
 		index := 1
@@ -216,6 +203,7 @@ Sort(array)
 		array.swap(index,marker)
 		marker++
 	}
+	
 	return array
 }
 
@@ -265,15 +253,8 @@ Swap(ByRef Left, ByRef Right)
     Right := temp
 }
 
-MouseWheel2(by = 1)
-{
-	global WheelDelay
-	Loop %by%
-	{
-		MouseClick, WheelUp, , , 20, 0, D, R
-		Sleep WheelDelay
-	}
-}
+;//////////////////////////////////////////////////////////////////
+;Movements
 
 xMoves(x)
 {

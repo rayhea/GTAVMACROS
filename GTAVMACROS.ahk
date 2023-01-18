@@ -903,6 +903,8 @@ Class Progress_Slider
 		
 		GuiTimer("Off")
 		
+		prev := ""
+		
 		While(GetKeyState("LButton"))
 		{
 			MouseGetPos, xtemp, ytemp
@@ -917,14 +919,23 @@ Class Progress_Slider
 			else if (this.init < this.rmin)
 				this.init := this.rmin
 			
-			this.set(this.init)
+			if (prev != this.init)
+				this.call()
 			
-			if (this.fn!="")
-				Func(this.fn).call(this.init)
+			prev := this.init
 		}
+		
+		this.call()
 		
 		GuiTimer("On")
 		
+	}
+	
+	call()
+	{
+		this.set(this.init)
+		if (this.fn!="")
+			Func(this.fn).call(this.init)
 	}
 	
 	set(value)
@@ -1038,7 +1049,7 @@ DisplayInputs()
 HoldwLabel:
 Suspend Permit
 LocalKeyTrimed := IntKeyFunc(A_ThisLabel)
-KeyWait, %LocalKeyTrimed%, T0.3
+KeyWait, %LocalKeyTrimed%, T0.4
 If ErrorLevel
 {
 	Send {q Down}
@@ -1565,10 +1576,7 @@ return
 ;/////////////////////////////////////////////////////////////////////////////////
 ;PHONE
 
-KeyboardArrow(Key,Count)
-{
-	Send {%Key% %Count%}
-}
+
 
 ;e.g MouseWheel("WheelUp",10,WheelDelay)
 MouseWheel(Wheel,Count,Delay)
@@ -1583,19 +1591,7 @@ MouseWheel(Wheel,Count,Delay)
 
 ;/////////////////////////////////////////////////////////////////////////////////
 
-LateralMovement(KeyMul,Selector)
-{
-	global WheelDelay
-	
-	If (Selector)   ;Mouse
-	{
-		wMoves(KeyMul,WheelDelay)
-	}
-	else            ;keyboard
-	{
-		uMoves(KeyMul)
-	}
-}
+
 
 ScrollpInterface(ContactNo)
 {
@@ -3193,8 +3189,8 @@ detectpixelof(label,state)
 				sleep, 200
 				return pixelwait(SocialClubpixel,,2,,,1)
 			case "Esc":
-				sleep, 400
-				return pixelwait(EscMenupixel,,2,,,1)
+				sleep, 100
+				return pixelwait(EscMenupixel,,2,400,,1)
 			case "IntMenu":
 				sleep, 200
 				return pixelwait(IntMenupixel,,2,,,1)
