@@ -1,3 +1,5 @@
+# do not play gta online due to new exploit found  
+
 # GTA ONLINE MACROS
 
 It's a Script written in Autohotkey for GTA V Online. It does not hack/temper game or its files in any shape or form, it just automate key strokes.
