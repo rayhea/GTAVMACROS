@@ -1,4 +1,4 @@
-# do not play gta online due to new exploit found  
+# Warning!! Do not play gta online due to new exploit!!
 
 # GTA ONLINE MACROS
 
