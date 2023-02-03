@@ -1274,9 +1274,9 @@ return
 
 Outfit:
 Suspend On
-if !(A_PriorHotkey=A_ThisHotKey && A_TimeSincePriorHotkey<PriorHotkeyDelay)   
+if !IsThatLabel("Outfit")
 {
-	InteractionMenu(["Style","Outfit"])
+	InteractionMenu(OutfitMenu)
 }
 else
 {
@@ -1512,22 +1512,19 @@ KeyWait, %LocalKeyTrimed%, T0.5
 ;Suspend On
 If ErrorLevel
 {
-	InteractionMenu(["Accessories","Masks"])
+	InteractionMenu(MaskMenu)
     
-	Accessed := true
+	AccessMenu := MaskMenu
 	KeyWait, %LocalKeyTrimed%
 }
 else
 {
 	;KeyWait, %LocalKeyTrimed%
 	KeyWait, %LocalKeyTrimed%, D T0.2
-	If !(A_PriorHotkey=A_ThisHotKey && A_TimeSincePriorHotkey<PriorHotkeyDelay)
+	
+	If (ErrorLevel)     ;Single Press
 	{
-		Accessed := false
-	}
-	If (ErrorLevel=true || Accessed=true)     ;Single Press
-	{
-		If Accessed
+		If IsThatLabel("Masks,Helmets")
 		{
 			Send {Right}{Space}
 		}
@@ -1538,15 +1535,17 @@ else
 			Send {NumpadSub Up}
 		}
 	}
-	else                                      ;Double Press
+	else                ;Double Press
 	{
-		InteractionMenu(["Accessories","Helmets"])
-		Accessed := true
+		InteractionMenu(HelmetMenu)
+		AccessMenu := HelmetMenu
 	}
 }
 
 ;Suspend Off
 return
+
+
 
 ;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

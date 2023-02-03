@@ -272,3 +272,9 @@ title2 := ["prize ride challenge","vehicle options","takeover options"]
 title0 := []
 title0.push(title1*)
 title0.push(title2*)
+
+OutfitMenu := ["Style","Outfit"]
+
+MaskMenu := ["Accessories","Masks"]
+HelmetMenu := ["Accessories","Helmets"]
+AccessMenu := ""

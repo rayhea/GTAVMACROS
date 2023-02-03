@@ -265,6 +265,44 @@ LabelParse(label,byref label1,byref args1,byref label2,byref args2)
 	}
 }
 
+PriorHotkey(data="")
+{
+	global
+	
+	;HelmetChange
+	
+	/*
+	if (A_PriorHotkey=A_ThisHotKey && A_TimeSincePriorHotkey<PriorHotkeyDelay)
+		return 1
+	*/
+	
+	if (intr=1 || init="")
+		return 0
+	
+	if (init[1]=data[1] && init[2]=data[2] && GetLastLog()="IntMenu")
+		return 1
+}
+
+IsThatLabel(name)
+{
+	;HelmetChange
+	
+	if (GetLastLog()="IntMenu")
+	{
+		array := StrSplit(name, ",")
+		mark := intpointer()
+		
+		Loop % array.count()
+		{
+			Error := ImageLabels(incr=0,mark,array[A_index],"*140")
+			if !Error
+			{
+				return 1
+			}
+		}
+	}
+}
+
 intlabel(name,start,len,mark,incr=0)
 {
 	

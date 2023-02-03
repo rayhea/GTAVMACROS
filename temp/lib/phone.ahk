@@ -751,10 +751,7 @@ LateralMovement(KeyMul,Selector)
 	}
 }
 
-KeyboardArrow(Key,Count)
-{
-	Send {%Key% %Count%}
-}
+
 
 MouseWheel2(by = 1)
 {
