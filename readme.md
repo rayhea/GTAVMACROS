@@ -9,7 +9,7 @@ GTAVMACROS offers many features but at the cost of tons of changes to game setti
 
 ## About AutoHotkey 
 
-It's a free and open source scripting language that lets you create keyboard shortcuts or hotkeys, macros and some automation in any Windows program.
+It's a free and open source scripting language that lets you create keyboard shortcuts, hotkeys, macros and some automation in any Windows Applications.
 
 ## Credits
 
@@ -17,13 +17,12 @@ There are many ideas taken from many scripts, some links are commented out in co
 - [2called_chaos](https://www.reddit.com/r/gtaonline/comments/bokair/i_polished_my_gtao_autohotkey_script_for_you_guys/)
 - [KeyMash](https://www.autohotkey.com/board/topic/149458-gta-online-quick-menu-macros/)
 
-
 ## Key Features
 - It uses OCR, pixel & image detection to navigate through Interaction Menu & Phone.
 - It disables necessary hotkeys whenever Interaction Menu, Phone, Home, Chatbox, Game Menu is opened.
-- It provides faster weapon toggle, binded to keyboard & extra buttons on mouse.
+- It provides faster weapon toggle, binded to keyboard & extra mouse buttons.
 - It has custom keys for Interaction Menu & Phone Contacts which can be easily assigned.
-- It has dynamic weapon keys, binded to extra buttons on mouse which can also be easily assigned.
+- It has dynamic weapon keys, binded to extra mouse buttons which can also be easily assigned.
 - It remaps `v` to toggle between first person and selected third person view.
 - It comes with it's own script menu with extra options.
 - It has LuckyWheel Alarm also can be used as custom alarm.
@@ -120,6 +119,10 @@ Modifying keys are not recommended for those who dont know AHK language but here
 
 #### Microphone Mute `;`
 - Select the modes from script menu i.e. Disabled, ToggleMute, HoldToTalk, TapToTalk.  
+- Disabled - To disable Mute Hotkey `;`. (by default)
+- ToggleMute - To toggle Mic.
+- HoldToTalk - Hold `;` to unmute.
+- TapToTalk - If threshold is not met for certain timeout duration then mic is muted or press `;` to reset.  
  *Note :- when Script is terminated, it unmutes the current muted microphone.* 
 
 #### Crosshair `Numpad+`
@@ -191,11 +194,11 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 ~~~
-Mechanic               "F7"
-MorsMutual             "F8"  
-Pegasus                "F9"
-Merryweather           "F10"
-Lester                 "F11"
+Mechanic               F7
+MorsMutual             F8
+Pegasus                F9
+Merryweather           F10
+Lester                 F11
 ~~~
 
 *Note :- Hold Press `F11` to Remove Wanted Level by Lester. For the script to know the arrangement of contacts in phone, press Contacts Detect button in Script menu (open using `~`) which is mentioned below in detail.*
@@ -220,10 +223,10 @@ Lester                 "F11"
 *By default they are assigned to following weapons.*
 
 ~~~
-SMG                    "F14"
-Sniper Riffle          "F13" 
-Heavy Weapons          "Mouse5"
-Toggle Rifle and Hand  "Mouse4"
+SMG                    F14
+Sniper Riffle          F13
+Heavy Weapons          Mouse5
+Toggle Rifle and Hand  Mouse4
 ~~~
 
 *Note :- if gaming mouse has 4 extra buttons, assign far away two keys to `F14` and `F13` and for 2 extra button gaming mouse no changes are required as `Mouse5` and `Mouse4` keys are defined. if two Mouse Button are assigned same weapon, when pressed furthest mouse button will scroll up and closest will scroll down the same weapon.*
@@ -231,9 +234,9 @@ Toggle Rifle and Hand  "Mouse4"
 ### Overrided Existing Keys
 ------------
 
-#### Scope `Middle Mouse`
-- Hold `Middle Mouse` button to Zoom while using Sniper Scope.
-- Single Press to Open Phone.
+#### Weapon Selects `1` to `9`
+- Single press to select weapon.
+- Double press to assigned `Mouse5` that weapon.
 
 #### Sneak `LCtrl`
 - Changed from Single Press to Hold Press.  
@@ -248,6 +251,10 @@ Toggle Rifle and Hand  "Mouse4"
 #### Auto Sprint `q`
 - Double press `q` To hold Down `w`  
  *Note:- Single Press `q` still changes radio station and Hold press `q` brings station wheel inside vehicle.*
+
+#### Scope `Middle Mouse`
+- Hold `Middle Mouse` button to Zoom while using Sniper Scope.
+- Single Press to Open Phone.
 
 #### Numpad Enter binded to Enter.
 
@@ -296,23 +303,23 @@ Toggle Rifle and Hand  "Mouse4"
 - To delete Select elment and press Del and to move just drag element up/down.
 
 #### Hacks
-- Auto : if checked, the script cycles through hack until it is complete
-- Detect Mode : Detects the hack 
+- Auto : If checked, the script cycles through hack until it is complete.
+- Detect Mode : Detects the hack.  
 
 *For faster response, select the hack from drop down list and uncheck Auto and press `k` respectively*
 
 ~~~
 For fingerprint hack
-press "k" for each fingerprint
+press k for each fingerprint
 
 For keypad hack
-press "k" when dot's are blinking 
+press k when dot's are blinking 
 
 For retro fingerprint hack
-press "k" for each fingerprint
+press k for each fingerprint
 
 For volt lab hack 
-press "k" at start
+press k at start
 
 Note :- for every hack, other keys must be untouched.
 ~~~
@@ -329,3 +336,5 @@ Note :- for every hack, other keys must be untouched.
 #### Sounds
 - Manages default Speakers.
 - Has Volume Mixer.
+
+*Note :- whenever new device is plugged in, press refresh to show in default drop down list*
