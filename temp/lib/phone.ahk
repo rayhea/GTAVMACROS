@@ -52,6 +52,27 @@ phpointer()
 	return 0
 }
 
+NoPhotoLoc()
+{
+	index := 0
+	Error := ImageNoPhoto()
+	if !Error
+	{
+		index := 5
+		Loop % 4
+		{
+			temp0 := 550+33*(index-1)
+			Error := ImageNoPhoto(temp0)
+			if !Error
+			{
+				break
+			}
+			index--
+		}
+	}
+	return index
+}
+
 ;/////////////////////////////////////////////////////////////////////////////////
 
 ContactsCheck()
@@ -292,10 +313,14 @@ NavpMenu(number)
 
 pMenuHome(number,delay)
 {
+	match1 := 0
 	
 	Loop % 2
 	{
-		match1 := DetectpMenu()
+		if (delay=100)
+		{
+			match1 := DetectpMenu()
+		}
 		
 		if (match1 = number)
 		{
@@ -309,6 +334,8 @@ pMenuHome(number,delay)
 			gosub detectphone
 		}
 	}
+	
+	delay := 100
 	
 	sleep 100
 	
@@ -339,53 +366,63 @@ pMenuHome(number,delay)
 	
 	return temp0[2]
 	
-	
 	detectphone:
-	Error := ImagePhoneV()
-	if Error
+	if (delay=400)
 	{
-		throw 1
+		Error1 := ImagePhoneH()
+		if !Error1
+		{
+			return
+		}
+		match1 := 1
 	}
+	
+	Error2 := ImagePhoneV()
+	if Error2
+	{
+		throw 0
+	}
+	
 	return
 	
 }
 
 StepNav(init,dest)
 {
-	if (init = 0)
-		throw 2
-	
-	cursor := displacement(init,dest,9)
-	
-	if (cursor=1 || cursor=-1)
+	if (init != 0)
 	{
-		label := Func("wMoves").bind(cursor)
-		index := traverse(init,cursor,9)
-		return [label,index]
-	}
-	
-	data0 := postgrid(init,dest)
-	term1 := data0.i
-	termy := Normalz(data0.y)
-	termx := Normalz(data0.x)
-	
-	if (termy)
-	{
-		label := Func("uMoves").bind(termy)
-		locy := traverse(term1[1],termy,3)
-		locx := term1[2]
-		index := gridpost(locy,locx,3)
-		return [label,index]
-	}
-	
-	if (termx)
-	{
-		wRestrict(term1[2],termx,3)
-		label := Func("wMoves").bind(termx)
-		locx := traverse(term1[2],termx,3)
-		locy := term1[1]
-		index := gridpost(locy,locx,3)
-		return [label,index]
+		cursor := displacement(init,dest,9)
+		
+		if (cursor=1 || cursor=-1)
+		{
+			label := Func("wMoves").bind(cursor)
+			index := traverse(init,cursor,9)
+			return [label,index]
+		}
+		
+		data0 := postgrid(init,dest)
+		term1 := data0.i
+		termy := Normalz(data0.y)
+		termx := Normalz(data0.x)
+		
+		if (termy)
+		{
+			label := Func("uMoves").bind(termy)
+			locy := traverse(term1[1],termy,3)
+			locx := term1[2]
+			index := gridpost(locy,locx,3)
+			return [label,index]
+		}
+		
+		if (termx)
+		{
+			wRestrict(term1[2],termx,3)
+			label := Func("wMoves").bind(termx)
+			locx := traverse(term1[2],termx,3)
+			locy := term1[1]
+			index := gridpost(locy,locx,3)
+			return [label,index]
+		}
 	}
 	
 	throw 3
@@ -546,31 +583,7 @@ ScrollContact(tag,pnum,mark0=-1)
 	return 0
 }
 
-NoPhotoLoc()
-{
-	global 
 
-	index := 5
-	Error := ImageNoPhoto()
-	if Error
-	{
-		index := 0
-	}
-	else
-	{
-		Loop % 4
-		{
-			temp0 := 550+33*(index-1)
-			Error := ImageNoPhoto(temp0)
-			if !Error
-			{
-				break
-			}
-			index--
-		}
-	}
-	return index
-}
 
 ErrorContacts(tag,pnum,size,mark0,range=4)
 {
