@@ -306,7 +306,7 @@ Toggle Rifle and Hand  Mouse4
 - Auto : If checked, the script cycles through hack until it is complete.
 - Detect Mode : Detects the hack.  
 
-*For faster response, select the hack from drop down list and uncheck Auto and press `k` respectively*
+*For faster response, select the hack from drop down list and uncheck Auto and press `k` as shown below*
 
 ~~~
 For fingerprint hack
