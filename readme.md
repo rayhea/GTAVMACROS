@@ -144,8 +144,13 @@ Modifying keys are not recommended for those who dont know AHK language but here
 ------------
 
 #### Drop BullShark `F3`
+- Only if you are CEO
+
 #### Drop Armor `F4`
+- Only if you are CEO
+
 #### Equip Armor `F5`  
+
 #### Eat Snack `F6`
 - Single Press to Eat 2 Snacks.
 - Hold Press to keep eating Snacks.
