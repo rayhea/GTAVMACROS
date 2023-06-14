@@ -91,17 +91,13 @@ intpage1(inc)
 	
 	if (gps=0)
 	{
-		service := intlabel("services",1,5,mark)
+		service := intlabel("services",1,6,mark)
 		
 		if service
 		{
 			index := intpos(6-service+mark,4)
 			
-			if intlabel("hide",service+1,1,mark)
-			{
-				menu :=-1
-			}
-			else
+			if (service=6 && intlabel("boss",1,1,mark))
 			{
 				menu := 1
 			}
@@ -113,24 +109,20 @@ intpage1(inc)
 			}
 			else
 			{
-				offset := inc+service-mark-6
-				size := 11
+				offset := inc+service-mark-7
+				size := 10
 			}
 			
 			stop := index+offset
 			size += index+service-mark-1
 			
+			catch := "service" + service
 		}
 		else
 		{
-			hide := intlabel("hide",1,3,mark)
+			hide := intlabel("hide",1,1,mark)
 			
 			index := intpos(8-hide+mark,4)
-			
-			if (hide>1)
-			{
-				menu := 1
-			}
 			
 			if (introle(menu))
 			{
@@ -138,12 +130,13 @@ intpage1(inc)
 			}
 			else
 			{
-				offset := inc+hide-mark-9
+				offset := inc+hide-mark-8
 			}
 			
 			stop := index+offset
-			size += 7+index+hide-mark
+			size := 7+index+hide-mark
 			
+			catch := "hide" + hide
 		}
 	}
 	else
@@ -182,7 +175,7 @@ intpage1(inc)
 		
 		if (gps=1)
 		{
-			if !intlabel("hide",7,1,mark)
+			if intlabel("boss",gps+1,1,mark)
 			{
 				
 				menu := 1
@@ -199,14 +192,16 @@ intpage1(inc)
 		else
 		{
 			offset := inc+gps-mark-1
-			size := 16
+			size := 15
 		}
 		
 		stop := index+offset
 		size += index+gps-mark-1
 		
+		catch := "gps" + gps
 	}
 	;tooltip % format("inc:{},gps:{},mark:{}",inc,gps,mark)
+	;tooltip % format("index:{},stop:{},size:{},catch:{}",index,stop,size,catch),0,0
 	
 	intsize(size)
 	
@@ -226,6 +221,12 @@ introle(byref menu)
 			public_role()
 		}
 	}
+	
+	if (menu = 0)
+	{
+		menu := player.get()
+	}
+	
 	return menu>4
 }
 
@@ -631,7 +632,7 @@ InteractionMenu(dest,next="",byref mError=0)
 		{
 			if ImageIntLabel()
 			{
-				if (intr=1)
+				if (intr=1 || intr=-1)
 				{
 					head0 := recognize_parent()
 					data0 := indexparse(head0)
