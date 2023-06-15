@@ -68,7 +68,7 @@ recognize_child()
 	{
 		x := 46, y := 130+26*(index-1)
 		ScrMode(x,y)
-		node := OCR([x,y,306,26],"eng")
+		node := OCR([x,y,257,26],"eng")
 	}
 	return node
 }
@@ -764,6 +764,8 @@ CustomMenuSearch()
 	{
 		mIndex := player.get()
 		dest := [indexparse(recognize_parent()).text,nodeparse(recognize_child()),mIndex]
+		
+		tooltip % format("parent:{} child:{}",dest[1],dest[2])
 		
 		if (mIndex != 1)
 		{
