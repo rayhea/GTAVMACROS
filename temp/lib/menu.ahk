@@ -765,7 +765,7 @@ CustomMenuSearch()
 		mIndex := player.get()
 		dest := [indexparse(recognize_parent()).text,nodeparse(recognize_child()),mIndex]
 		
-		tooltip % format("parent:{} child:{}",dest[1],dest[2])
+		;tooltip % format("parent:{} child:{}",dest[1],dest[2]),0,0
 		
 		if (mIndex != 1)
 		{
