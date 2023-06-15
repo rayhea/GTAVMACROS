@@ -315,9 +315,8 @@ SetKeyDelay(,,"Play")
 ;test weapon wheel
 
 DataArr := [[112.5, 67.5],[67.5, 22.5],[22.5, 337.5],[337.5, 292.5],[292.5, 247.5],[247.5, 202.5],[202.5, 157.5],[157.5, 112.5]]
-ColorNames := [["000000", "Black"],["000080", "Navy"],["0000FF", "Blue"],["008000","Green"],["008080", "Aqua"],["00FF00", "Lime"],["00FFFF","Aqua"],["240A40", "Violet"],["800080", "Purple"],["800000", "Maroon"],["808000", "Olive"],["808080","Gray"],["964B00", "Brown"],["C0C0C0","Silver"],["FF0000", "Red"],["FF00FF","Pink"],["FF681F", "Orange"],["FFFF00", "Yellow"],["FFFFFF", "White"]]
 
-GuessColor := New ntc(ColorNames)
+;GuessColor := New ntc()
 
 ;\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 ;func4chat
@@ -2254,7 +2253,7 @@ Getinfo()
 
 GetWeaponWheelStats()
 {
-	global weaponwheel,GuessColor,CurrentWeapon
+	global weaponwheel,CurrentWeapon
 	
 	WheelConfig := Getinfo()
 	
